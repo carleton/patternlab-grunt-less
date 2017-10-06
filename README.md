@@ -1,4 +1,4 @@
-# Pattern Lab Node - Grunt Edition
+# Pattern Lab Node - Grunt Edition - Less Integration
 
 The Grunt wrapper around [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node), providing tasks to interact with the core library and move supporting frontend assets.
 
@@ -10,6 +10,10 @@ The Grunt Edition comes with the following components:
 * `patternengine-node-mustache`: [GitHub](https://github.com/pattern-lab/patternengine-node-mustache), [npm](https://www.npmjs.com/package/patternengine-node-mustache)
 * `pattern-lab/styleguidekit-assets-default`: [GitHub](https://github.com/pattern-lab/styleguidekit-assets-default)
 * `pattern-lab/styleguidekit-mustache-default`: [GitHub](https://github.com/pattern-lab/styleguidekit-mustache-default)
+
+This fork adds:
+
+* `grunt-contrib-less`: [GitHub](https://github.com/gruntjs/grunt-contrib-less)
 
 ## Prerequisites
 
