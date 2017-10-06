@@ -13,6 +13,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   /******************************************************
    * PATTERN LAB CONFIGURATION
@@ -72,7 +73,7 @@ module.exports = function (grunt) {
         files: [
           { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js', dest: path.resolve(paths().public.js) },
           { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js.map', dest: path.resolve(paths().public.js) },
-          { expand: true, cwd: path.resolve(paths().source.css), src: '**/*.css', dest: path.resolve(paths().public.css) },        
+          { expand: true, cwd: path.resolve(paths().source.css), src: '**/*.css', dest: path.resolve(paths().public.css) },
           { expand: true, cwd: path.resolve(paths().source.css), src: '**/*.css.map', dest: path.resolve(paths().public.css) },
           { expand: true, cwd: path.resolve(paths().source.images), src: '**/*', dest: path.resolve(paths().public.images) },
           { expand: true, cwd: path.resolve(paths().source.fonts), src: '**/*', dest: path.resolve(paths().public.fonts) },
@@ -81,6 +82,13 @@ module.exports = function (grunt) {
           // slightly inefficient to do this again - I am not a grunt glob master. someone fix
           { expand: true, flatten: true, cwd: path.resolve(paths().source.styleguide, 'styleguide', 'css', 'custom'), src: '*.css)', dest: path.resolve(paths().public.styleguide, 'css') }
         ]
+      }
+    },
+    less: {
+      build: {
+        files: {
+          "public/css/style.css": "source/less/style.less"
+        }
       }
     },
     /******************************************************
@@ -99,6 +107,13 @@ module.exports = function (grunt) {
           path.resolve(paths().source.root + '/*.ico')
         ],
         tasks: ['default', 'bsReload:css']
+      },
+      styles: {
+        files: [ 'source/less/style.less' ],
+        tasks: [ 'less' ],
+        options: {
+          spawn: false
+        }
       }
     },
     browserSync: {
@@ -152,9 +167,9 @@ module.exports = function (grunt) {
    * COMPOUND TASKS
   ******************************************************/
 
-  grunt.registerTask('default', ['patternlab', 'copy:main']);
-  grunt.registerTask('patternlab:build', ['patternlab', 'copy:main']);
-  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'watch:all']);
-  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'browserSync', 'watch:all']);
+  grunt.registerTask('default', ['patternlab', 'copy:main' ,'less']);
+  grunt.registerTask('patternlab:build', ['patternlab', 'copy:main', 'less']);
+  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main' ,'less', 'watch:all']);
+  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main' ,'less', 'browserSync', 'watch:all']);
 
 };
