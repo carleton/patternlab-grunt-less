@@ -13,7 +13,8 @@
     "patternlab-node": "^2.0.0",
     "styleguidekit-assets-default": "^3.0.0",
     "styleguidekit-mustache-default": "^3.0.0",
-    "grunt-contrib-less": "^1.4.0"
+    "grunt-contrib-less": "^1.4.0",
+    "patternengine-node-twig": "^0"
   },
   "keywords": [
     "Pattern Lab",
