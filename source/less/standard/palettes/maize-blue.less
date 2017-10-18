@@ -22,11 +22,11 @@
 
 @children-base-color: @base-color-2;
 @children-background-color: mix(@children-base-color, @background-color, 25%);
-@children-text-color: colorContrastYIQ(@children-background-color, mix(@base-text-color, @children-background-color, 80%), mix(@children-background-color, @background-color, 20%));
-@children-title-text-color: colorContrastYIQ(@children-background-color, multiply(@base-text-color,@children-background-color), @background-color);
+@children-text-color: contrast(@children-background-color, mix(@base-text-color, @children-background-color, 80%), mix(@children-background-color, @background-color, 20%));
+@children-title-text-color: contrast(@children-background-color, multiply(@base-text-color,@children-background-color), @background-color);
 @children-background-hover-color: mix(@children-base-color, @background-color, 40%);
-@children-text-hover-color: colorContrastYIQ(@children-background-hover-color, @base-text-color, mix(@children-background-hover-color, @background-color, 20%));
-@children-title-text-hover-color: colorContrastYIQ(@children-background-hover-color, multiply(@base-text-color,@children-background-hover-color), @background-color);
+@children-text-hover-color: contrast(@children-background-hover-color, @base-text-color, mix(@children-background-hover-color, @background-color, 20%));
+@children-title-text-hover-color: contrast(@children-background-hover-color, multiply(@base-text-color,@children-background-hover-color), @background-color);
 
 @siblings-background-color: mix(@siblings-base-color, @background-color, 40%);
 @siblings-background-hover-color: mix(@siblings-base-color, @background-color, 55%);
@@ -35,7 +35,7 @@
 @related-pub-more-hover-background-color: mix(@related-pub-base-color, @minical-background-color, 81%);
 
 @navjump-background-color: mix(@base-color-1, @background-color, 90%);
-@navjump-icontext-color: colorContrastYIQ(@navjump-background-color, mix(@base-text-color, @navjump-background-color, 85%), @background-color);
+@navjump-icontext-color: contrast(@navjump-background-color, mix(@base-text-color, @navjump-background-color, 85%), @background-color);
 
 @standard-button-background-color-4: saturate(darken(@accent-color-2,2%),2%);
 
@@ -45,7 +45,7 @@
 @events-views-current-background-color: @events-views-base-color;
 @events-views-background-color: mix(@events-views-base-color, @background-color, 28%);
 @events-nav-background-color: mix(@events-nav-base-color, @background-color, 50%);
-@events-item-displaydate-month-text-color: mix(colorContrastYIQ(@events-item-displaydate-background-color, @base-text-color, @background-color), @events-item-displaydate-background-color, 96%);
+@events-item-displaydate-month-text-color: mix(contrast(@events-item-displaydate-background-color, @base-text-color, @background-color), @events-item-displaydate-background-color, 96%);
 
 @related-pub-more-background-color: mix(@related-pub-base-color, @minical-background-color, 97%);
 
