@@ -1,0 +1,38 @@
+// The color of the site background
+@background-color: rgb(255,255,255);
+
+// The primary anchor color; used for navigation, etc.
+@base-color-1: rgb(160,185,112);
+
+// The secondary color, used for other major elements
+@base-color-2: rgb(196,166,126);
+
+// The primary accent color, used for site title & other key attention-getting elements
+@accent-color-1: rgb(149,108,51);
+
+// The secondary accent color, used for page titles & secondary attention elements
+@accent-color-2: darken(rgb(104,142,173), 5%);
+
+// Basic text colors
+@base-text-color: rgb(51,51,51);
+@base-link-color: rgb(11,80,145);
+
+@h4-color: saturate(darken(mix(@base-color-1, @accent-color-1, 60%),12%),6%);
+// @h4-in-callout: darken(multiply(@h4-color, @callout-background-color),1%);
+@h4-in-callout: darken(@h4-color, 10%);
+
+@navjump-background-color: mix(@base-color-1, @background-color, 77%);
+@navjump-icontext-color: mix(colorContrastYIQ(@navjump-background-color, @base-text-color, @background-color), @navjump-background-color, 80%);
+
+@minical-date-text-color: darken(@accent-color-1, 10%);
+@related-pub-datetime-text-color: darken(@accent-color-1, 10%);
+
+@events-grid-has-event-link-color: darken(saturate(@base-color-2, 10%), 25%);
+@events-focus-subheading-color: @events-grid-has-event-link-color;
+@events-options-selected-item-color: @events-grid-has-event-link-color;
+@events-options-heading-color: mix(@base-text-color, @events-options-background-color, 75%);
+@events-options-background-color: @events-grid-background-color;
+@events-focus-background-color: @events-grid-background-color;
+@events-form-submit-background-color: @events-grid-background-color;
+@publication-pagination-current-background-color: @base-color-1;
+@image-gallery-pagination-current-background-color: @base-color-1;

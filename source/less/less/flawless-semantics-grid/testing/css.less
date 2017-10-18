@@ -1,0 +1,83 @@
+//@import '../project/stylesheets/config.less';
+@import "../project/stylesheets/normalize.less";
+@import "../project/stylesheets/grid/useful-mixins.less"; // loads several useful mixins and calculations required by semantic.gs
+@import "../project/stylesheets/grid/flawless-grid.less"; // loads the grid
+
+@columns: 32;
+@column-width: 60;
+@gutter-width: 0;
+@total-width: 100%;
+@show-grid:false;
+@show-rhythm: false;
+
+.outerWrapper {
+	margin:0 auto;
+	max-width:80em;
+	width:100%;
+}
+section {
+	background:#eee;
+}
+article {
+	background:#bbb;
+}
+aside {
+	background:#ddd;
+}
+nav {
+	background:#ccc;
+}
+
+@media all and (min-width:28em) {
+.outerWrapper {
+	width:96%;
+}
+.wrapper {
+	.grid();
+}
+section {
+	.column(32);
+	.push(0);
+}
+article {
+	.column(15.5);
+}
+article+article {
+	.push(1);
+}
+aside {
+	.column(15.5);
+}
+nav {
+	.column(15.5);
+	.push(1);
+}
+}
+@media all and (min-width:40.000001em) {
+.outerWrapper {
+	width:92%;
+}
+.wrapper {
+	.grid();
+	max-width:80em;
+}
+section {
+	.column(18);
+	.push(7);
+	.widths(18);
+}
+article {
+	.column(8.5);
+}
+article+article {
+	.push(1);
+}
+aside {
+	.column(8.5, 18);
+	.push(1, 18);
+}
+nav {
+	.column(8.5, 18);
+	.push(-18, 18);
+}
+}

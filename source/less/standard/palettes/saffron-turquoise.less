@@ -1,0 +1,46 @@
+//@ccce-orange: rgb(219,81,47);
+@ccce-orange: saturate(darken(rgb(219,81,47),5%),5%);
+@ccce-yellow: rgb(219,172,46);
+@ccce-ltblue: rgb(146,215,219);
+@ccce-dkblue: rgb(59,75,99);
+@ccce-green: saturate(darken(rgb(163,204,89), 5%), 5%);
+
+// The color of the site background
+@background-color: rgb(254,254,252);
+
+// The primary anchor color; used for navigation, etc.
+@base-color-1: @ccce-yellow;
+
+// The secondary color, used for other major elements
+@base-color-2: @ccce-ltblue;
+
+// The primary accent color, used for site title & other key attention-getting elements
+@accent-color-1: @ccce-orange;
+
+// The secondary accent color, used for page titles & secondary attention elements
+@accent-color-2: @ccce-green;
+
+// Basic text colors
+@base-text-color: rgb(51,51,51);
+@base-link-color: @ccce-dkblue;
+
+@navjump-icontext-color: mix(colorContrastYIQ(@navjump-background-color, @base-text-color, @background-color), @navjump-background-color, 85%);
+
+@pagetitle-color: saturate(darken(@accent-color-2, 15%), 10%);
+
+@h3-color: darken(@accent-color-1, 7%);
+@h4-color: @accent-color-1;
+
+@features-nav-background-color:fadeout( darken(@features-nav-base-color, 44%), 5% );
+@features-nav-hover-background-color:fadeout( darken(@features-nav-base-color, 33%), 5% );
+
+@related-pub-datetime-text-color: saturate(darken(@accent-color-1, 6%), 6%);
+@minical-date-text-color: saturate(darken(@accent-color-1, 6%), 6%);
+
+@events-grid-link-color: mix(@base-link-color, multiply(@events-grid-background-color, @base-color-2), 77%);
+@events-grid-today-color: saturate(darken(@accent-color-1, 6%), 6%);
+
+@events-options-selected-item-color: saturate(darken(@accent-color-1, 6%), 6%);
+
+@events-item-title-color: @pagetitle-color;
+

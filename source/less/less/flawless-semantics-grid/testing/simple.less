@@ -1,0 +1,32 @@
+@import "../project/stylesheets/normalize.less";
+@import "../project/stylesheets/grid/useful-mixins.less"; // loads several useful mixins and calculations required by semantic.gs
+@import "../project/stylesheets/grid/flawless-grid.less"; // loads the grid
+
+@columns: 32;
+@column-width: 60;
+@gutter-width: 0;
+@total-width: 100%;
+@show-grid:false;
+@show-rhythm: false;
+
+.first {
+	.grid();
+	background:#eee;
+	max-width:1240px;
+	margin:0 auto;
+}
+.second {
+	.column(19);
+	background:#ddd;
+}
+.second + .second {
+	.column(12);
+	.push(1);
+}
+.third {
+	.column(9, 19);
+	background:#ccc;
+}
+.third + .third {
+	.push(1, 19);
+}
