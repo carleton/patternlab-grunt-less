@@ -1,0 +1,175 @@
+#minisiteNavigation ul, #minisiteNavigation li {
+	margin:0;
+	padding:0;
+	list-style:none;
+	display:block;
+}
+#minisiteNavigation {
+	line-height:1.1;
+	a, strong {
+		display:block;
+		padding:3.5% 4.5%;
+		margin:0 0 1px 0;
+		text-decoration:none;
+		position:relative;
+	}
+	a {
+		background: @nav-background-color;
+		.getContrastYIQ(@nav-background-color);
+		color: @nav-text-color;
+	}
+	li.jump a {
+		padding-right:1.6em !important;
+		&:before {
+			.iconIt(@icon-external-link);
+			position:absolute;
+			right:0.5em;
+			font-size:0.9em;
+			opacity:0.67;
+		}
+	}
+}
+
+/* todo: figure out how to do angled indicator to right of current page */
+
+#minisiteNavigation a:hover {
+	background: @nav-hover-background-color;
+	.getContrastYIQ(@nav-hover-background-color);
+	color: @nav-hover-text-color;
+}
+#minisiteNavigation ul ul ul {
+ 	a, strong {
+		padding:3.25% 4.5% 3.25% 8%
+	}
+}
+#minisiteNavigation ul ul ul ul {
+ 	a, strong {
+		padding:3% 4.5% 3% 11%
+	}
+}
+#minisiteNavigation ul ul ul ul ul {
+ 	a, strong {
+		padding:2.75% 4.5% 2.75% 14%
+	}
+}
+#minisiteNavigation ul ul ul ul ul ul {
+ 	a, strong {
+		padding:2.5% 4.5% 2.5% 17%
+	}
+}
+#minisiteNavigation ul {
+	ul li.open a, ul li.open strong, li strong {
+		background:@nav-background-current-section-1;
+		.getContrastYIQ(@nav-background-current-section-1);
+		color: @nav-text-current-section-1;
+	}
+	li.current>a:after, li.current>strong:after {
+		color:@nav-background-current-section-1;
+	}
+	ul li.open a:hover {
+		background:@nav-background-current-section-1-hover;
+		.getContrastYIQ(@nav-background-current-section-1-hover);
+		color: @nav-text-current-section-1-hover;
+	}
+	li.current>a:hover:after {
+		color:@nav-background-current-section-1-hover;
+	}
+	ul ul li.open a, ul ul li.open strong {
+		background:@nav-background-current-section-2;
+		.getContrastYIQ(@nav-background-current-section-2);
+		color: @nav-text-current-section-2;
+	}
+	ul ul li.current>a:after, ul ul li.current>strong:after {
+		color:@nav-background-current-section-2;
+	}
+	ul ul li.open a:hover {
+		background:@nav-background-current-section-2-hover;
+		.getContrastYIQ(@nav-background-current-section-2-hover);
+		color: @nav-text-current-section-2-hover;
+	}
+	ul ul li.current>a:hover:after {
+		color:@nav-background-current-section-2-hover;
+	}
+	ul ul ul li.open a, ul ul ul li.open strong {
+		background:@nav-background-current-section-3;
+		.getContrastYIQ(@nav-background-current-section-3);
+		color: @nav-text-current-section-3;
+	}
+	ul ul ul li.current>a:after, ul ul ul li.current>strong:after {
+		color:@nav-background-current-section-3;
+	}
+	ul ul ul li.open a:hover {
+		background:@nav-background-current-section-3-hover;
+		.getContrastYIQ(@nav-background-current-section-3-hover);
+		color: @nav-text-current-section-3-hover;
+	}
+	ul ul ul li.current>a:hover:after {
+		color:@nav-background-current-section-3-hover;
+	}
+	ul ul ul ul li.open a, ul ul ul ul li.open strong {
+		background:@nav-background-current-section-4;
+		.getContrastYIQ(@nav-background-current-section-4);
+		color: @nav-text-current-section-4;
+	}
+	ul ul ul ul li.current>a:after, ul ul ul ul li.current>strong:after {
+		color:@nav-background-current-section-4;
+	}
+	ul ul ul ul li.open a:hover {
+		background:@nav-background-current-section-4-hover;
+		.getContrastYIQ(@nav-background-current-section-4-hover);
+		color: @nav-text-current-section-4-hover;
+	}
+	ul ul ul ul li.current>a:hover:after {
+		color:@nav-background-current-section-4-hover;
+	}
+	ul ul ul ul ul li.open a, ul ul ul ul ul li.open strong {
+		background:@nav-background-current-section-5;
+		.getContrastYIQ(@nav-background-current-section-5);
+		color: @nav-text-current-section-5;
+	}
+	ul ul ul ul li.current>a:after, ul ul ul ul ul li.current>strong:after {
+		color:@nav-background-current-section-5;
+	}
+	ul ul ul ul ul li.open a:hover {
+		background:@nav-background-current-section-5-hover;
+		.getContrastYIQ(@nav-background-current-section-5-hover);
+		color: @nav-text-current-section-5-hover;
+	}
+	ul ul ul ul ul li.current>a:hover:after {
+		color:@nav-background-current-section-5-hover;
+	}
+	ul ul li {
+		font-size:0.94em;
+	}
+	ul li a strong, ul li a strong, ul ul li a strong, ul ul ul li a strong, ul li.open a strong, ul ul li.open a strong {
+		padding:0;
+		background-color:transparent;
+		background-image:none;
+		border:none;
+	}
+}
+@media all and (max-width:@left-nav-lower-limit - 1) {
+	#minisiteNavigation li.current>a:after, #minisiteNavigation li.current>strong:after {
+		color:@background-color !important;
+		position:absolute;
+		top:50%;
+		left:0;
+		width:8px;
+		height:16px;
+		margin-top:-8px;
+		font-size:16px;
+		.iconIt(@icon-triangle-right);
+	}
+}
+@media all and (min-width:@left-nav-lower-limit) {
+	#minisiteNavigation li.current>a:after, #minisiteNavigation li.current>strong:after {
+		position:absolute;
+		top:50%;
+		right:-10px;
+		width:10px;
+		height:20px;
+		font-size:20px;
+		margin-top:-10px;
+		.iconIt(@icon-triangle-right);
+	}
+}
