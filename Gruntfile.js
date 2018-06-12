@@ -87,7 +87,7 @@ module.exports = function (grunt) {
     less: {
       build: {
         files: {
-          "public/css/style.css": "source/less/style.less"
+          "source/css/style.css": "source/less/style.less"
         }
       }
     },
@@ -97,8 +97,10 @@ module.exports = function (grunt) {
     watch: {
       all: {
         files: [
+          path.resolve(paths().source.less + '**/*.less'),
           path.resolve(paths().source.css + '**/*.css'),
           path.resolve(paths().source.styleguide + 'css/*.css'),
+          path.resolve(paths().source.data + '*.json'),
           path.resolve(paths().source.patterns + '**/*'),
           path.resolve(paths().source.fonts + '/*'),
           path.resolve(paths().source.images + '/*'),
@@ -107,13 +109,6 @@ module.exports = function (grunt) {
           path.resolve(paths().source.root + '/*.ico')
         ],
         tasks: ['default', 'bsReload:css']
-      },
-      styles: {
-        files: [ 'source/less/style.less' ],
-        tasks: [ 'less' ],
-        options: {
-          spawn: false
-        }
       }
     },
     browserSync: {
@@ -167,9 +162,9 @@ module.exports = function (grunt) {
    * COMPOUND TASKS
   ******************************************************/
 
-  grunt.registerTask('default', ['patternlab', 'copy:main' ,'less']);
-  grunt.registerTask('patternlab:build', ['patternlab', 'copy:main', 'less']);
-  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main' ,'less', 'watch:all']);
-  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main' ,'less', 'browserSync', 'watch:all']);
+  grunt.registerTask('default', ['patternlab', 'less', 'copy:main']);
+  grunt.registerTask('patternlab:build', ['patternlab', 'less', 'copy:main']);
+  grunt.registerTask('patternlab:watch', ['patternlab', 'less', 'copy:main', 'watch:all']);
+  grunt.registerTask('patternlab:serve', ['patternlab', 'less', 'copy:main', 'browserSync', 'watch:all']);
 
 };

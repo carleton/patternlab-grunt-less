@@ -1,2 +1,23 @@
-<nav id="minisiteNavigation" class="module_identifier-mcla-NavigationModule-mloc-navigation-mpar-fb803aca84dbfff2e856969d64f2ee30 module_api-standalone" role="navigation" aria-label="page"><div class="list"><ul class="navListTop"><li class="navListItem open"><a href="/curricular/bioc/" class="home"><span>Biochemistry Home</span></a><ul class="navList"><li class="navListItem closed"><a href="/curricular/bioc/faculty/">Faculty and Staff</a></li><li class="navListItem open current item1"><strong>The Minor</strong><ul class="navList"><li class="navListItem closed item1"><a href="/curricular/bioc/minor/minor_req/">Minor Requirements</a></li></ul></li><li class="navListItem closed item2"><a href="/curricular/bioc/newstudents/">Information for First-Year Students</a></li></ul></li></ul>
-</div></nav>
+{% macro renderNav(links) %}
+    {% for link in links %}
+        <li>
+            <a href="{{ link.url }}">{{ link.label }}</a>
+            {% if link.children %}
+                <ul>
+                    {{ _self.render_nav(link.children) }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}
+
+<nav id="minisiteNavigation" class="module_identifier-mcla-NavigationModule-mloc-navigation-mpar-fb803aca84dbfff2e856969d64f2ee30 module_api-standalone" role="navigation" aria-label="page">
+<div class="list">
+<ul class="navListTop">
+<!-- <li class="navListItem open"><a href="/curricular/bioc/" class="home"><span>{{ site_name }} Home</span></a><ul class="navList"><li class="navListItem closed"><a href="/curricular/bioc/faculty/">Faculty and Staff</a></li><li class="navListItem open current item1"><strong>The Minor</strong><ul class="navList"><li class="navListItem closed item1"><a href="/curricular/bioc/minor/minor_req/">Minor Requirements</a></li></ul></li><li class="navListItem closed item2"><a href="/curricular/bioc/newstudents/">Information for First-Year Students</a></li></ul></li> -->
+{{ dump(navigation) }}
+{{ _self.renderNav( navigation ) }}
+</ul>
+</div>
+</nav>
+

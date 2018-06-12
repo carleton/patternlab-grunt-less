@@ -1,0 +1,12 @@
+{% macro render_nav(links) %}
+    {% for link in links %}
+        <li>
+            <a href="{{ link.url }}">{{ link.label }}</a>
+            {% if link.children %}
+                <ul>
+                    {{ _self.render_nav(link.children) }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}
