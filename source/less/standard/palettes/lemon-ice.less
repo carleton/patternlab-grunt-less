@@ -1,0 +1,42 @@
+// The color of the site background
+@background-color: rgb(255,255,255);
+
+// The primary anchor color; used for navigation, etc.
+@base-color-1: rgb(241,224,139);
+
+// The secondary color, used for other major elements
+@base-color-2: rgb(175,202,234);
+
+// The primary accent color, used for site title & other key attention-getting elements
+@accent-color-1: rgb(90,19,0);
+
+// The secondary accent color, used for page titles & secondary attention elements
+@accent-color-2: rgb(130,160,196);
+
+// Basic text colors
+@base-text-color: rgb(51,51,51);
+@base-link-color: rgb(11,80,145);
+
+@pagetitle-color: saturate(darken(@accent-color-2,4%),3%);
+
+@h4-color: mix(@base-color-1, @accent-color-1, 43%);
+
+@standard-button-background-color-3: @accent-color-1;
+@standard-button-text-color-3: colorContrastYIQ(@standard-button-background-color-3, @base-text-color, @background-color);
+@standard-button-focus-background-color-3: saturate(mix(@standard-button-background-color-3, @background-color, 85%), 7%);
+@standard-button-focus-text-color-3: colorContrastYIQ(@standard-button-focus-background-color-3, @base-text-color, @background-color);
+@standard-button-hover-background-color-3:  saturate(mix(@standard-button-background-color-3, @background-color, 85%), 7%);
+@standard-button-hover-text-color-3: colorContrastYIQ(@standard-button-hover-background-color-3, @base-text-color, @background-color);
+@standard-button-active-background-color-3:  saturate(mix(@standard-button-background-color-3, @background-color, 75%), 10%);
+@standard-button-active-text-color-3: colorContrastYIQ(@standard-button-active-background-color-3, @base-text-color, @background-color);
+
+@features-nav-fallback-background-color: mix(@base-text-color, mix(@features-nav-base-color, @background-color, 33%), 67%);
+@features-nav-background-color:fadeout( desaturate(darken(@features-nav-base-color, 40%), 10%), 10% );
+@features-nav-text-color: @background-color;
+@features-nav-hover-background-color: darken(@features-nav-base-color, 30%);
+
+@events-item-title-color: saturate(darken(@accent-color-2, 6%), 4%);
+@events-nav-link-text-color: colorContrastYIQ(@events-nav-link-background-color, multiply(@base-text-color, @events-nav-link-background-color), @background-color);
+@events-grid-link-color:colorContrastYIQ(@events-grid-background-color, @base-link-color, @background-color);
+@events-grid-days-color: multiply(mix(@base-text-color, @background-color, 68%), @events-grid-background-color);
+@events-grid-has-event-link-color: mix(@base-link-color, darken(saturate(@base-color-2, 10%), 10%), 75%);

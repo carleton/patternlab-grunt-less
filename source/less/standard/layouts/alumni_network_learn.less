@@ -1,0 +1,208 @@
+@columns: 47;
+@left-nav-lower-limit: 900px;
+#meat {
+	.grid();
+	.clearfix;
+}
+
+#footer, #bannerAndMeat {
+	.bottommargin(2, 23);
+}
+#content, #related {
+	&>* {
+		.bottommargin(1, 23);
+	}
+	&>*:last-child {
+		.bottommargin(0);
+	}
+}
+#meat h3 {
+	.padding(1,23);
+	.toppadding(0.5,23);
+	.bottompadding(0.5,23);
+	margin: 0;
+	.bottommargin(0.5,23);
+}
+#meat .adventuresSummary h3 {
+	padding: 0;
+	a {
+		display: block;
+		margin: 0;
+		.padding(1,23);
+		.toppadding(0.5,23);
+		.bottompadding(0.5,23);
+	}
+}
+ul.adventuresList, .mediaLinks ul.items {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	.row();
+	li {
+		display: block;
+		.column(11,23);
+		.bottommargin(1,23);
+		&:first-child, &:first-child+li+li {
+			// &:nth-child(odd) would be better but IE8 doesn't recognize it
+			clear: left;
+		}
+		&:first-child+li, &:first-child+li+li+li {
+			// &:nth-child(even) would be better but IE8 doesn't recognize it
+			.push(1,23);
+		}
+		img {
+			display: block;
+		}
+	}
+}
+ul.adventuresList li {
+	.tnImage, .noImage {
+		.column(4,11);
+	}
+	.noImage {
+		height: 0;
+		.toppadding(4,11);
+		background-image: url('/global_stock/css/alumni_adventures_standard/adventure-penguin-160.jpg');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.adventureLabel {
+		.column(6.5,11);
+		.push(0.5,11);
+	}
+}
+
+@media all and (max-width:399px) {
+	ul.adventuresList {
+		li {
+			.column(23,23);
+			&:first-child, &:first-child+li+li {
+				clear: none;
+			}
+			&:first-child+li, &:first-child+li+li+li {
+				.push(0,23);
+			}
+		}
+	}
+}
+@media all and (max-width:549px) {
+	#meat {
+		display: table;
+	}
+	#content {
+		.topmargin(1,23);
+		.bottommargin(2,23);
+	}
+	#preSidebar {
+		.bottommargin(0);
+		h3.learnHead {
+			.bottommargin(0);
+		}
+		.heading + ul {
+			.topmargin(1,23);
+		}
+	}
+	#sidebar {
+		.topmargin(1,23);
+	}
+	#related {
+		display: table-caption;
+		width: 100%;
+		.bottommargin(1,23);
+	}
+	.js #related {
+		.bottommargin(0);
+	}
+}
+@media all and (min-width:550px) and (max-width:@left-nav-lower-limit - 1) {
+	#content {
+		.column(17, 35);
+		.bottommargin(1, 35);
+	}
+	#related {
+		.column(17, 35);
+		.push(1, 35);
+		.bottommargin(1, 35);
+	}
+	#bannerAndMeat {
+		.bottommargin(1, 35);
+	}
+	#content, #related {
+		&>* {
+			.bottommargin(1, 17);
+		}
+	}
+	#footer {
+		.bottommargin(2, 35);
+	}
+	#meat h3 {
+		.padding(1,17);
+		.toppadding(0.5,17);
+		.bottompadding(0.5,17);
+		.bottommargin(0.5,17);
+	}
+	#meat .adventuresSummary h3 {
+		a {
+			.padding(1,17);
+			.toppadding(0.5,17);
+			.bottompadding(0.5,17);
+		}
+	}
+	ul.adventuresList {
+		li {
+			.column(17,17);
+			.bottommargin(0.5,17);
+			&:first-child, &:first-child+li+li {
+				clear: none;
+			}
+			&:first-child+li, &:first-child+li+li+li {
+				.push(0,17);
+			}
+		}
+	}
+	.mediaLinks ul.items {
+		li {
+			.column(8,17);
+			.bottommargin(1,17);
+			&:first-child, &:first-child+li+li {
+				clear: left;
+			}
+			&:first-child+li, &:first-child+li+li+li {
+				.push(1,17);
+			}
+			img {
+				display: block;
+			}
+		}
+	}
+	ul.adventuresList li {
+		.tnImage, .noImage {
+			.column(5,17);
+		}
+		.noImage {
+			height: 0;
+			.toppadding(5,17);
+			background-image: url('/global_stock/css/alumni_adventures_standard/adventure-penguin-160.jpg');
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		.adventureLabel {
+			.column(11.5,17);
+			.push(0.5,17);
+		}
+	}
+}
+@media all and (min-width:@left-nav-lower-limit) {
+	#content {
+		.column(23, 47);
+		.bottommargin(1, 47);
+	}
+	#related {
+		.column(23, 47);
+		.push(1, 47);
+		.bottommargin(1, 47);
+	}
+}

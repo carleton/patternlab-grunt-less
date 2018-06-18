@@ -1,0 +1,479 @@
+@blue: rgb(0,86,184);
+@blue-light: mix(@base-color-2, @background-color, 83%);
+@yellow: rgb(255,183,24);
+@yellow-light: rgb(250,214,134);
+@red: rgb(146,53,50);
+@white: rgb(255,255,255);
+@green: rgb(88,135,69);
+@150-gray: rgb(238,238,238);
+@gray: rgb(238,238,238);
+
+// The color of the site background
+@background-color: @white;
+
+// The primary anchor color; used for navigation, etc.
+@base-color-1: @yellow;
+
+// The secondary color, used for other major elements
+@base-color-2: @blue;
+
+// The primary accent color, used for site title & other key attention-getting elements
+@accent-color-1: @red;
+
+// The secondary accent color, used for page titles & secondary attention elements
+@accent-color-2: @green;
+
+@neutral-color-1: @gray;
+
+// Basic text colors
+//@base-text-color: rgb(51,51,51);
+@base-text-color: rgb(90,90,90);
+//@base-link-color: rgb(11,80,145);
+
+@base-link-color: @blue;
+@base-link-visited-color: desaturate(@base-link-color, 10%);
+@base-link-hover-color: darken(@base-link-color, 10%);
+
+@minical-more-text-color: @background-color;
+@related-pub-more-text-color: @background-color;
+
+// End basic colors
+
+// Banner site name
+// @sitename-color: @accent-color-1;
+// @sitename-hover-color: lighten(saturate(@accent-color-1, 10%), 10%);
+
+// Banner navigation jump
+// @navjump-background-color: @base-color-1;
+// @navjump-icontext-color: mix(colorContrastYIQ(@navjump-background-color, @base-text-color, @background-color), @navjump-background-color, 75%);
+// @navjump-hover-background-color: mix(@navjump-background-color, @background-color, 75%);
+// @navjump-hover-icontext-color: colorContrastYIQ(@navjump-hover-background-color, @base-text-color, @background-color);
+
+// Navigation
+@nav-background-color: @neutral-color-1;
+@nav-text-color: @base-text-color;
+@nav-hover-background-color: mix(@base-color-2, @background-color, 75%);
+@nav-hover-text-color: colorContrastYIQ(@nav-hover-background-color, @base-text-color, @background-color);
+
+@nav-background-current-section-1: mix(@base-color-2, @background-color, 75%);
+@nav-text-current-section-1:  colorContrastYIQ(@nav-hover-background-color, @base-text-color, @background-color);
+@nav-background-current-section-1-hover: mix(@base-color-1, @background-color, 55%);
+@nav-text-current-section-1-hover:  colorContrastYIQ(@nav-background-current-section-1-hover, @base-text-color, @background-color);
+
+@nav-background-current-section-2:  mix(@nav-background-current-section-1, @background-color, 68%);
+@nav-text-current-section-2:  colorContrastYIQ(@nav-background-current-section-2, @base-text-color, @background-color);
+@nav-background-current-section-2-hover:  mix(@nav-background-current-section-1, @background-color, 58%);
+@nav-text-current-section-2-hover:  colorContrastYIQ(@nav-background-current-section-2-hover, @base-text-color, @background-color);
+
+@nav-background-current-section-3:  mix(@nav-background-current-section-2, @background-color, 71%);
+@nav-text-current-section-3:  colorContrastYIQ(@nav-background-current-section-3, @base-text-color, @background-color);
+@nav-background-current-section-3-hover:  mix(@nav-background-current-section-2, @background-color, 61%);
+@nav-text-current-section-3-hover:  colorContrastYIQ(@nav-background-current-section-3-hover, @base-text-color, @background-color);
+
+@nav-background-current-section-4: mix(@nav-background-current-section-3, @background-color, 74%);
+@nav-text-current-section-4:  colorContrastYIQ(@nav-background-current-section-4, @base-text-color, @background-color);
+@nav-background-current-section-4-hover: mix(@nav-background-current-section-3, @background-color, 64%);
+@nav-text-current-section-4-hover:  colorContrastYIQ(@nav-background-current-section-4-hover, @base-text-color, @background-color);
+
+@nav-background-current-section-5: mix(@nav-background-current-section-4, @background-color, 77%);
+@nav-text-current-section-5:  colorContrastYIQ(@nav-background-current-section-5, @base-text-color, @background-color);
+@nav-background-current-section-5-hover: mix(@nav-background-current-section-4, @background-color, 67%);
+@nav-text-current-section-5-hover:  colorContrastYIQ(@nav-background-current-section-5-hover, @base-text-color, @background-color);
+
+// Standard content
+@pagetitle-color: @base-text-color;
+@pagetitle-link-color: @base-text-color;
+// @pagetitle-link-underline-color: mix(@pagetitle-link-color, @background-color, 33%);
+// @pagetitle-link-hover-color: darken(saturate(@pagetitle-link-color, 12%), 10%);
+// @pagetitle-link-underline-hover-color: mix(@pagetitle-link-hover-color, @background-color, 50%);
+
+@h3-color: @base-text-color;
+@h4-color: @base-text-color;
+@h5-color: @base-text-color;
+@h6-color: @base-text-color;
+
+// @callout-background-color: mix(@base-color-2, @background-color, 25%);
+// @callout-text-color: multiply(@base-text-color, @callout-background-color);
+// @callout-link-color: multiply(@base-link-color, @callout-background-color);
+// @callout-link-visited-color: multiply(@base-link-visited-color, @callout-background-color);
+// @callout-link-hover-color: multiply(@base-link-hover-color, @callout-background-color);
+
+// @blockquote-decoration-color: mix(@base-color-2, @background-color, 33%);
+
+@hr-color: @neutral-color-1;
+
+// Assets
+// @assets_heading_color: mix(@base-text-color, @background-color, 50%);
+// @assets_date_color: mix(@base-text-color, @background-color, 40%);
+
+// MiniCal
+@minical-base-color: @base-color-2;
+@minical-heading-background-color: @white;
+@minical-background-color: @white;
+@minical-heading-text-color: @base-text-color;
+@minical-heading-hover-background-color: transparent;
+@minical-heading-hover-text-color: @base-link-color;
+@minical-date-text-color: @accent-color-1;
+@minical-time-text-color: mix(@base-text-color, @minical-background-color, 50%);
+@minical-eventlink-text-color: multiply(@base-link-color, @minical-background-color);
+@minical-eventlink-text-hover-color: multiply(@base-link-hover-color, @minical-background-color);
+@minical-more-background-color: mix(@minical-base-color, @minical-background-color, 81%);
+@minical-more-text-color: colorContrastYIQ(@minical-more-background-color, @base-text-color, @background-color);
+@minical-more-hover-background-color: @minical-base-color;
+@minical-more-hover-text-color: colorContrastYIQ(@minical-more-hover-background-color, @base-text-color, @background-color);
+
+// Related Publications
+// @related-pub-base-color: @base-color-2;
+// @related-pub-background-color: mix(@related-pub-base-color, @background-color, 25%);
+// @related-pub-heading-background-color: @related-pub-base-color;
+// @related-pub-heading-text-color: colorContrastYIQ(@related-pub-heading-background-color, @base-text-color, @background-color);
+// @related-pub-datetime-text-color: @accent-color-1;
+// @related-pub-postlink-text-color: multiply(@base-link-color, @minical-background-color);
+// @related-pub-postlink-text-hover-color: multiply(@base-link-hover-color, @minical-background-color);
+// @related-pub-more-background-color: mix(@related-pub-base-color, @minical-background-color, 81%);
+// @related-pub-more-text-color: colorContrastYIQ(@related-pub-more-background-color, @base-text-color, @background-color);
+// @related-pub-more-hover-background-color: @related-pub-base-color;
+// @related-pub-more-hover-text-color: colorContrastYIQ(@related-pub-more-hover-background-color, @base-text-color, @background-color);
+
+// Children
+// @children-base-color: @base-color-2;
+// @children-background-color: rgb(255,0,0);
+// @children-text-color: colorContrastYIQ(@children-background-color, @base-text-color, mix(@children-background-color, @background-color, 20%));
+// @children-title-text-color: colorContrastYIQ(@children-background-color, @base-text-color, @background-color, 180);
+// @children-background-hover-color: mix(@children-base-color, @background-color, 80%);
+// @children-text-hover-color: colorContrastYIQ(@children-background-hover-color, @base-text-color, mix(@children-background-hover-color, @background-color, 20%));
+// @children-title-text-hover-color: colorContrastYIQ(@children-background-hover-color, @base-text-color, @background-color, 180);
+
+// Sidebar Images
+@image-sidebar-captions-text-color: mix(@base-text-color, @background-color, 56%);
+@image-sidebar-captions-link-color: mix(@base-text-color, @background-color, 67%);
+@image-sidebar-captions-link-hover-color: mix(@base-link-color, @background-color, 67%);
+
+// Image gallery
+// @image-gallery-pagination-background-color: mix(@base-color-2, @background-color, 25%);
+// @image-gallery-pagination-text-color: colorContrastYIQ(@image-gallery-pagination-background-color, @base-text-color, @background-color);
+// @image-gallery-pagination-link-background-color: @base-color-2;
+// @image-gallery-pagination-link-text-color: colorContrastYIQ(@image-gallery-pagination-link-background-color, @base-text-color, @background-color);
+// @image-gallery-pagination-current-background-color: darken(saturate(@base-color-2, 10%), 10%);
+// @image-gallery-pagination-current-text-color: colorContrastYIQ(@image-gallery-pagination-current-background-color, @base-text-color, @background-color);
+// @image-gallery-pagination-link-hover-background-color: darken(saturate(@base-color-2, 20%), 20%);
+// @image-gallery-pagination-link-hover-text-color: colorContrastYIQ(@image-gallery-pagination-link-hover-background-color, @base-text-color, @background-color);
+// @image-gallery-pagination-ellipsis-background-color: mix(@base-color-2, @background-color, 67%);
+// @image-gallery-pagination-ellipsis-text-color: mix(colorContrastYIQ(@image-gallery-pagination-ellipsis-background-color, @base-text-color, @background-color), @image-gallery-pagination-ellipsis-background-color, 75%);
+
+// @image-gallery-captions-text-color: mix(@base-text-color, @background-color, 56%);
+// @image-gallery-captions-link-color: mix(@base-text-color, @background-color, 67%);
+// @image-sidebar-captions-link-hover-color: mix(@base-link-color, @background-color, 67%);
+
+// @image-gallery-next-page-block-background-color: mix(@base-color-2, @background-color, 25%);
+// @image-gallery-next-page-block-text-color: mix(colorContrastYIQ(@image-gallery-next-page-block-background-color, @base-text-color, @background-color), @image-gallery-next-page-block-background-color, 67%);
+// @image-gallery-next-page-block-background-hover-color: mix(@base-color-2, @background-color, 33%);
+// @image-gallery-next-page-block-text-hover-color: colorContrastYIQ(@image-gallery-next-page-block-background-hover-color, multiply(@image-gallery-next-page-block-background-hover-color, @base-text-color), @background-color);
+
+// @image-gallery-search-field-background-color: mix(@image-gallery-pagination-background-color, @background-color, 50%);
+// @image-gallery-search-field-text-color: multiply(@image-gallery-search-field-background-color, @base-text-color);
+// @image-gallery-search-submit-background-color: @base-color-2;
+// @image-gallery-search-submit-text-color: colorContrastYIQ(@image-gallery-search-submit-background-color, @base-text-color, @background-color);
+// @image-gallery-search-button-background-color: mix(@base-color-2, @background-color, 50%);
+// @image-gallery-search-button-text-color: colorContrastYIQ(@image-gallery-search-button-background-color, @base-text-color, @background-color, 190);
+// @image-gallery-search-button-icon-color: mix(@base-color-2, @background-color, 90%);
+
+// @image-gallery-thumbnails-link-background-color: mix(@base-color-2, @background-color, 8%);
+// @image-gallery-thumbnails-link-text-color: colorContrastYIQ(@image-gallery-thumbnails-link-background-color, @base-link-color, @background-color);
+// @image-gallery-thumbnails-link-icon-color: mix(@image-gallery-thumbnails-link-text-color, @image-gallery-thumbnails-link-background-color, 67%);
+// @image-gallery-thumbnails-link-hover-background-color: mix(@base-color-2, @background-color, 16%);
+// @image-gallery-thumbnails-link-hover-text-color: colorContrastYIQ(@image-gallery-thumbnails-link-hover-background-color, @base-link-color, @background-color);
+// @image-gallery-thumbnails-link-hover-icon-color: mix(@image-gallery-thumbnails-link-hover-text-color, @image-gallery-thumbnails-link-hover-background-color, 67%);
+
+// Forms
+@form-field-background-color: mix(@base-text-color, @background-color, 7%);
+@form-field-border-color: mix(@base-text-color, @background-color, 22%);
+@form-field-text-color: colorContrastYIQ(@form-field-background-color, @base-text-color, @background-color);
+@form-field-active-background-color: mix(@base-color-1, @background-color, 10%);
+@form-field-active-border-color: mix(@form-field-border-color, mix(@base-color-1, @background-color, 24%), 67%);
+@form-field-active-text-color: colorContrastYIQ(@form-field-active-background-color, multiply(@base-text-color, @form-field-active-background-color), @background-color);
+@form-submit-background-color: @accent-color-2;
+@form-submit-text-color: colorContrastYIQ(@accent-color-2, @base-text-color, @background-color);
+@form-submit-hover-background-color: darken(saturate(@form-submit-background-color, 10%), 10%);
+@form-submit-hover-text-color: colorContrastYIQ(@form-submit-hover-background-color, @base-text-color, @background-color);
+@form-submit-active-background-color: darken(saturate(@form-submit-background-color, 20%), 16%);
+@form-submit-active-text-color: colorContrastYIQ(@form-submit-active-background-color, @base-text-color, @background-color);
+@form-submit-disabled-background-color: lighten(desaturate(@form-submit-background-color, 67%), 33%);
+@form-submit-disabled-text-color: colorContrastYIQ(@form-submit-active-background-color, @base-text-color, @background-color);
+@form-submit-waiting-message-text-color: mix(@base-text-color, @background-color, 67%);
+@form-required-indicator-message-text-color: mix(@base-text-color, @background-color, 85%);
+@form-required-indicator-color: @accent-color-1;
+@form-required-indicator-message-symbol-color: mix(@form-required-indicator-color, @form-required-indicator-message-text-color, 67%);
+@form-loginlogout-background-color: mix(@base-text-color, @background-color, 10%);
+@form-loginlogout-text-color: mix(@base-text-color, @background-color, 85%);
+@form-loginlogout-link-color: mix(@base-link-color, @background-color, 85%);
+@form-loginlogout-link-background-color: mix(@base-text-color, @background-color, 3%);
+@form-loginlogout-link-hover-color: @form-loginlogout-link-background-color;
+@form-loginlogout-link-hover-background-color: @form-loginlogout-link-color;
+@form-admincontrolbox-background-color: @form-loginlogout-background-color;
+@form-admincontrolbox-text-color: colorContrastYIQ(@form-admincontrolbox-background-color, @base-text-color, @background-color);
+@form-admincontrolbox-link-color: mix(@base-link-color, @background-color, 75%);
+@form-admincontrolbox-link-background-color: mix(@base-text-color, @background-color, 3%);
+@form-admincontrolbox-link-hover-color: @form-admincontrolbox-link-background-color;
+@form-admincontrolbox-link-hover-background-color: @form-admincontrolbox-link-color;
+@form-error-field-background-color: saturate(mix(@base-color-1, @background-color, 10%), 33%);
+@form-error-field-text-color: colorContrastYIQ(@form-error-field-background-color, @base-text-color, @background-color);
+@form-error-notice-heading-text-color: saturate(@accent-color-1, 25%);
+@form-error-field-label-text-color: @accent-color-1;
+
+// Publications
+@blog-description-color: mix(@base-text-color, @background-color, 67%);
+@publication-issue-date-color: mix(@base-text-color, @background-color, 67%);
+@publication-section-heading-background-color: mix(@base-color-2, @background-color, 25%);
+@publication-section-heading-text-color: mix(colorContrastYIQ(@publication-section-heading-background-color, @base-text-color, @background-color, 160), @publication-section-heading-background-color, 67%);
+@publication-section-more-icon-color: @publication-section-heading-background-color;
+@publication-section-menu-background-color: mix(@publication-section-heading-background-color, @background-color, 67%);
+@publication-list-item-title-color: @accent-color-1;
+@publication-list-item-title-hover-color: saturate(darken(@publication-list-item-title-color, 12%), 12%);
+@publication-list-item-date-color: mix(@base-text-color, @background-color, 50%);
+@publication-item-date-color: mix(@base-text-color, @background-color, 50%);
+@publication-item-author-color: mix(@base-text-color, @background-color, 50%);
+@publication-image-captions-text-color: @image-sidebar-captions-text-color;
+@publication-image-captions-link-color: @image-sidebar-captions-link-color;
+@publication-image-captions-link-hover-color: @image-sidebar-captions-link-hover-color;
+@publication-nextprev-background-color: mix(@base-color-1, @background-color, 15%);
+@publication-nextprev-link-color: colorContrastYIQ(@publication-nextprev-background-color, @base-text-color, @background-color);
+@publication-nextprev-background-hover-color: mix(@base-color-1, @background-color, 25%);
+@publication-nextprev-heading-color: mix(@base-text-color, @publication-nextprev-background-color, 50%);
+@publications-search-icon-color: mix(@base-text-color, @background-color, 50%);
+@publication-search-field-background-color: mix(@base-text-color, @background-color, 14%);
+@publication-search-field-border-color: mix(@base-text-color, @background-color, 14%);
+@publication-search-field-focus-background-color: mix(@base-color-1, @background-color, 15%);
+@publication-search-field-focus-border-color: darken(@publication-search-field-focus-background-color, 15%);
+@publication-search-submit-background-color: @yellow-light;
+@publication-search-submit-text-color: mix(colorContrastYIQ(@publication-search-submit-background-color, @base-text-color, @background-color), @publication-search-submit-background-color, 75%);
+@publication-search-submit-background-hover-color: mix(@base-color-1, @background-color, 75%);
+@publication-search-submit-text-hover-color: colorContrastYIQ(@publication-search-submit-background-hover-color, @base-text-color, @background-color);
+@publication-tag-color: darken(@neutral-color-1, 4%);
+@publication-selected-tag-color: mix(@base-color-1, @background-color, 67%);
+@publication-tag-hover-color: darken(@neutral-color-1, 8%);
+@publication-tag-message-icon-color: mix(@base-text-color, @background-color, 50%);
+
+@publication-comment-heading-icon-color: mix(@base-color-1, @background-color, 67%);
+@publication-comment-background-color: mix(@base-color-1, @background-color, 15%);
+@publication-comment-quotation-mark-color: mix(@base-color-1, @background-color, 67%);
+@publication-comment-date-color: mix(colorContrastYIQ(@publication-comment-background-color, @base-text-color, @background-color), @publication-comment-background-color, 50%);
+@publication-comment-author-color: @accent-color-1;
+
+@publication-comment-form-heading-background-color: @base-color-1;
+@publication-comment-form-heading-text-color: colorContrastYIQ(@publication-comment-form-heading-background-color, @base-text-color, @background-color);
+@publication-comment-form-heading-icon-color: mix(colorContrastYIQ(@publication-comment-form-heading-background-color, @base-text-color, @background-color, 200),@publication-comment-form-heading-background-color, 75%);
+@publication-comment-form-background-color: mix(@base-color-1, @background-color, 22%);
+@publication-comment-form-text-color: colorContrastYIQ(@publication-comment-form-background-color, @base-text-color, @background-color);
+@publication-comment-form-element-background-color: mix(@publication-comment-form-background-color, @background-color, 10%);
+@publication-comment-form-element-border-color: darken(desaturate(@publication-comment-form-element-background-color, 25%), 15%);
+@publication-comment-added-background-color: @accent-color-1;
+@publication-comment-added-text-color: colorContrastYIQ(@publication-comment-added-background-color, @base-text-color, @background-color);
+@publication-comment-added-link-color: mix(colorContrastYIQ(@publication-comment-added-background-color, @base-text-color, @background-color), @publication-comment-added-background-color, 75%);
+@publication-comment-added-link-hover-color: colorContrastYIQ(@publication-comment-added-background-color, @base-text-color, @background-color);
+
+@publication-comment-form-heading-background-color-disabled: mix(@base-text-color, @background-color, 16%);
+@publication-comment-form-heading-text-color-disabled: mix(colorContrastYIQ(@publication-comment-form-heading-background-color-disabled, @base-text-color, @background-color), @publication-comment-form-heading-background-color-disabled, 67%);
+@publication-comment-form-heading-icon-color-disabled: mix(colorContrastYIQ(@publication-comment-form-heading-background-color-disabled, @base-text-color, @background-color, 200),@publication-comment-form-heading-background-color-disabled, 33%);
+@publication-comment-form-background-color-disabled: mix(@base-text-color, @background-color, 8%);
+@publication-comment-form-text-color-disabled: mix(colorContrastYIQ(@publication-comment-form-background-color-disabled, @base-text-color, @background-color),@publication-comment-form-background-color-disabled, 75%);
+
+@publication-persistent-linearized-background-color: mix(@base-color-2, @background-color, 15%);
+@publication-persistent-toggler-text-color: mix(@base-text-color, @publication-persistent-linearized-background-color, 67%);
+
+@publication-pagination-background-color: mix(@base-color-2, @background-color, 25%);
+@publication-pagination-text-color: colorContrastYIQ(@publication-pagination-background-color, @base-text-color, @background-color);
+@publication-pagination-link-background-color: @base-color-2;
+@publication-pagination-link-text-color: colorContrastYIQ(@publication-pagination-link-background-color, @base-text-color, @background-color);
+@publication-pagination-current-background-color: darken(saturate(@base-color-2, 10%), 10%);
+@publication-pagination-current-text-color: colorContrastYIQ(@publication-pagination-current-background-color, @base-text-color, @background-color);
+@publication-pagination-link-hover-background-color: darken(saturate(@base-color-2, 20%), 20%);
+@publication-pagination-link-hover-text-color: colorContrastYIQ(@publication-pagination-link-hover-background-color, @base-text-color, @background-color);
+@publication-pagination-ellipsis-background-color: mix(@base-color-2, @background-color, 67%);
+@publication-pagination-ellipsis-text-color: mix(colorContrastYIQ(@publication-pagination-ellipsis-background-color, @base-text-color, @background-color), @publication-pagination-ellipsis-background-color, 75%);
+
+// General feed xml link
+// @feed-link-background-color: @base-color-1;
+// @feed-link-text-color: colorContrastYIQ(@feed-link-background-color, @base-text-color, @background-color);
+// @feed-link-icon-color: mix(colorContrastYIQ(@feed-link-background-color, @base-text-color, @background-color, 190), @feed-link-background-color, 75%);
+// @feed-link-background-hover-color: @accent-color-1;
+// @feed-link-text-hover-color: colorContrastYIQ(@feed-link-background-hover-color, @base-text-color, @background-color);
+// @feed-link-icon-hover-color: mix(colorContrastYIQ(@feed-link-background-hover-color, @base-text-color, @background-color, 190), @feed-link-background-hover-color, 75%);
+@feed-link-background-color: @150-gray;
+@feed-link-text-color: colorContrastYIQ(@feed-link-background-color, @base-text-color, @background-color);
+@feed-link-icon-color: mix(colorContrastYIQ(@feed-link-background-color, @base-text-color, @background-color, 190), @feed-link-background-color, 75%);
+@feed-link-background-hover-color: @accent-color-1;
+@feed-link-text-hover-color: colorContrastYIQ(@feed-link-background-hover-color, @base-text-color, @background-color);
+@feed-link-icon-hover-color: mix(colorContrastYIQ(@feed-link-background-hover-color, @base-text-color, @background-color, 190), @feed-link-background-hover-color, 75%);
+
+// Fac/Staff
+// @facstaff-navlinks-current-tab-background-color: @base-color-2;
+// @facstaff-navlinks-current-tab-text-color: colorContrastYIQ(@facstaff-navlinks-current-tab-background-color, @base-text-color, @background-color);
+// @facstaff-navlinks-tab-background-color: mix(@facstaff-navlinks-current-tab-background-color, @background-color, 75%);
+// @facstaff-navlinks-tab-text-color: colorContrastYIQ(@facstaff-navlinks-tab-background-color, @base-text-color, @background-color);
+// @facstaff-navlinks-tab-background-hover-color: mix(@facstaff-navlinks-current-tab-background-color, @background-color, 88%);
+// @facstaff-navlinks-tab-text-hover-color: colorContrastYIQ(@facstaff-navlinks-tab-background-hover-color, @base-text-color, @background-color);
+// @facstaff-navlinks-background-color: mix(@facstaff-navlinks-current-tab-background-color, @background-color, 25%);
+// @facstaff-navlinks-text-color: colorContrastYIQ(@facstaff-navlinks-background-color, @base-text-color, @background-color);
+
+// //@facstaff-image-placeholder-background-color: mix(@facstaff-navlinks-current-tab-background-color, @background-color, 67%);
+// //@facstaff-image-placeholder-background-color: mix(@base-text-color, @background-color, 33%);
+// @facstaff-image-placeholder-background-color: desaturate(mix(@facstaff-navlinks-current-tab-background-color, @background-color, 50%), 33%);
+// @facstaff-image-placeholder-icon-color: mix(@facstaff-image-placeholder-background-color, @background-color, 67%);
+// @facstaff-heading-color: mix(@base-text-color, @background-color, 75%);
+
+// @facstaff-name-background-color: @base-color-2;
+// @facstaff-name-text-color: colorContrastYIQ(@facstaff-name-background-color, @base-text-color, @background-color);
+// @facstaff-profile-link-background-color: mix(@facstaff-name-background-color, @background-color, 72%);
+// @facstaff-profile-link-text-color: colorContrastYIQ(@facstaff-profile-link-background-color, @base-text-color, @background-color);
+// @facstaff-profile-link-background-hover-color: mix(@facstaff-profile-link-background-color, @background-color, 67%);
+// @facstaff-profile-link-text-hover-color: colorContrastYIQ(@facstaff-profile-link-background-hover-color, @base-text-color, @background-color);
+
+// @facstaff-person-background-color: mix(@facstaff-name-background-color, @background-color, 12.5%);
+// @facstaff-person-text-color: colorContrastYIQ(@facstaff-person-background-color, @base-text-color, @background-color);
+// @facstaff-leave-text-color: @accent-color-1;
+// @facstaff-info-icon-color: mix(@facstaff-name-background-color, @background-color, 50%);
+// @facstaff-phone-number-color: mix(@facstaff-person-text-color, @facstaff-person-background-color, 67%);
+// @facstaff-phone-extension-color: @facstaff-person-text-color;
+
+// Features
+@features-text-color: @background-color;
+@features-nav-base-color: @base-color-2;
+@features-nav-fallback-background-color: mix(@base-text-color, mix(@features-nav-base-color, @background-color, 33%), 50%);
+@features-nav-background-color:fadeout( @features-nav-base-color, 50% );
+@features-nav-text-color: mix(@features-nav-base-color, @background-color, 33%);
+@features-nav-hover-background-color: fadeout( @features-nav-base-color, 33% );
+@features-nav-hover-text-color: @background-color;
+@features-nav-current-background-color: @features-nav-base-color;
+@features-nav-current-text-color: colorContrastYIQ(@features-nav-base-color, @base-text-color, @background-color);
+
+// Announcemenets
+// @announcements-base-color: @accent-color-1;
+// @announcements-background-color: @announcements-base-color;
+// @announcements-text-color: colorContrastYIQ(@announcements-background-color, @base-text-color, @background-color);
+
+// Events
+// Events Views
+@events-views-base-color: @base-color-2;
+@events-views-background-color: mix(@events-views-base-color, @background-color, 33%);
+@events-views-text-color: colorContrastYIQ(@events-views-background-color, @base-text-color, @background-color);
+@events-views-hover-background-color:  mix(@events-views-base-color, @background-color, 20%);
+@events-views-hover-text-color: colorContrastYIQ(@events-views-hover-background-color, @base-text-color, @background-color);
+@events-views-current-background-color: mix(@events-views-base-color, @background-color, 85%);
+
+@events-views-current-text-color: colorContrastYIQ(@events-views-current-background-color, @base-text-color, @background-color);
+
+// Events Nav
+@events-nav-base-color: @events-views-base-color;
+@events-nav-background-color: mix(@events-nav-base-color, @background-color, 55%);
+// @todo: figure out how to get this to err light
+@events-nav-text-color: colorContrastYIQ(@events-nav-background-color, @base-text-color, @background-color, 180);
+@events-nav-link-background-color: darken(saturate(@events-nav-base-color, 10%), 10%);
+@events-nav-link-text-color: mix(colorContrastYIQ(@events-nav-link-background-color, @base-text-color, @background-color), @events-nav-base-color, 85%);
+@events-nav-link-hover-background-color: @events-nav-base-color;
+@events-nav-link-hover-text-color: colorContrastYIQ(@events-nav-link-hover-background-color, @base-text-color, @background-color);
+
+// Events grid
+@events-grid-background-color: mix(@base-color-1, @background-color, 15%);
+@events-grid-heading-color: mix(@base-text-color, @events-grid-background-color, 90%);
+@events-grid-text-color: colorContrastYIQ(@events-grid-background-color, @base-text-color, @background-color);
+@events-grid-link-color:colorContrastYIQ(@events-grid-background-color, @base-color-2, @background-color);
+@events-grid-days-color: mix(@base-text-color, @events-grid-background-color, 55%);
+@events-grid-has-event-link-color: darken(saturate(@base-color-2, 10%), 10%);
+@events-grid-currently-viewing-background-color: mix(@events-grid-background-color, @background-color, 33%);
+@events-grid-today-color: @accent-color-1;
+@events-grid-today-border-color: mix(@events-grid-today-color, @events-grid-background-color, 25%);
+@events-datejump-background-color: @events-grid-background-color;
+
+// Events search
+@events-search-background-color: @events-grid-background-color;
+@events-search-input-background-color: mix(@events-search-background-color, @background-color, 20%);
+@events-search-input-text-color: colorContrastYIQ(@events-search-input-background-color, @base-text-color, @background-color);
+@events-search-input-border-color: mix(@base-text-color, @events-search-background-color, 25%);
+
+// Events options
+@events-options-background-color: mix(@base-color-2, @background-color, 15%);
+@events-options-heading-color: mix(@base-text-color, @events-options-background-color, 67%);
+@events-options-selected-item-color: @accent-color-1;
+
+// Events focus
+@events-focus-background-color: mix(@base-color-2, @background-color, 15%);
+@events-focus-text-color: colorContrastYIQ(@events-focus-background-color, @base-text-color, @background-color);
+@events-focus-heading-color: mix(@events-focus-text-color, @events-focus-background-color, 67%);
+@events-focus-subheading-color: colorContrastYIQ(@events-focus-background-color, @accent-color-1, @background-color);
+@events-focus-search-input-background-color: mix(@events-focus-background-color, @background-color, 33%);
+@events-focus-search-input-text-color: colorContrastYIQ(@events-focus-search-input-background-color, @base-text-color, @background-color);
+@events-focus-search-input-border-color: mix(@base-text-color, @events-focus-background-color, 50%);
+
+@events-form-submit-background-color: mix(@base-color-2, @background-color, 75%);
+@events-form-submit-text-color: colorContrastYIQ(@events-form-submit-background-color, @base-text-color, @background-color);
+@events-form-submit-hover-background-color: darken(saturate(@events-form-submit-background-color, 10%), 10%);
+@events-form-submit-hover-text-color: colorContrastYIQ(@events-form-submit-hover-background-color, @base-text-color, @background-color);
+@events-form-submit-active-background-color: darken(saturate(@events-form-submit-background-color, 20%), 16%);
+@events-form-submit-active-text-color: colorContrastYIQ(@events-form-submit-active-background-color, @base-text-color, @background-color);
+
+// Events list
+@events-list-upcoming-archive-heading-color: mix(@base-text-color, @background-color, 33%);
+@events-list-month-heading-color: mix(@base-text-color, @background-color, 67%);
+@events-list-date-heading-color: @accent-color-1;
+@events-list-text-color: mix(@base-text-color, @background-color, 67%);
+@events-list-error-color: mix(@base-text-color, @background-color, 67%);
+
+// Events subscribe
+@events-subscribe-divider-color: mix(@base-text-color, @background-color, 50%);
+
+// Events item
+@events-item-back-wrapper-background-color: mix(@base-color-2, @background-color, 16%);
+@events-item-back-wrapper-text-color: colorContrastYIQ(@events-item-back-wrapper-background-color, @base-text-color, @background-color);
+@events-item-back-link-background-color: mix(@base-color-2, @background-color, 33%);
+@events-item-back-link-text-color: colorContrastYIQ(@events-item-back-link-background-color, @base-text-color, @background-color);
+@events-item-back-link-hover-background-color: mix(@base-color-2, @background-color, 50%);
+@events-item-back-link-hover-text-color: colorContrastYIQ(@events-item-back-link-hover-background-color, @base-text-color, @background-color);
+@events-item-displaydate-background-color: @base-color-2;
+@events-item-displaydate-text-color: mix(colorContrastYIQ(@events-item-displaydate-background-color, @base-text-color, @background-color), @events-item-displaydate-background-color, 85%);
+@events-item-title-color: @accent-color-2;
+@event-item-text-color: mix(@base-text-color, @background-color, 88%);
+@event-item-time-location-divider-color: mix(@event-item-text-color, @background-color, 50%);
+@events-item-repetition-explanation-text-color: mix(@event-item-text-color, @background-color, 75%);
+@events-item-more-information-icon-color: mix(@base-color-2, @background-color, 33%);
+
+@events-item-slot-registration-background-color: mix(@base-color-2, @background-color, 12%);
+@events-item-slot-registration-text-color: mix(@base-text-color, @events-item-slot-registration-background-color, 90%);
+@events-item-slot-registration-icon-color: mix(@base-color-2, @background-color, 50%);
+@events-item-slot-registration-register-link-background-color: @base-color-2;
+@events-item-slot-registration-register-link-text-color: colorContrastYIQ(@base-color-2, @base-text-color, @background-color);
+@events-item-slot-registration-register-link-hover-background-color: darken(saturate(@base-color-2, 10%), 10%);
+@events-item-slot-registration-register-link-hover-text-color: colorContrastYIQ(@events-item-slot-registration-register-link-hover-background-color, @base-text-color, @background-color);
+@events-item-registration-slot-input-background-color: mix(@events-item-slot-registration-background-color, @background-color, 33%);
+@events-item-registration-slot-input-text-color: colorContrastYIQ(@events-item-registration-slot-input-background-color, @base-text-color, @background-color);
+@events-item-registration-slot-input-border-color: mix(@base-text-color, @events-item-slot-registration-background-color, 33%);
+@events-item-registration-slot-data-background-color-odd: mix(@base-color-2, @background-color, 30%);
+@events-item-registration-slot-data-text-color-odd: colorContrastYIQ(@events-item-registration-slot-data-background-color-odd, @base-text-color, @background-color);
+@events-item-registration-slot-data-background-color-even: mix(@base-color-2, @background-color, 18%);
+@events-item-registration-slot-data-text-color-even: colorContrastYIQ(@events-item-registration-slot-data-background-color-even, @base-text-color, @background-color);
+@events-item-registration-slot-data-divider-color: @background-color;
+
+@events-item-meta-background-color: mix(@base-color-1, @background-color, 10%);
+@events-item-meta-text-color: mix(colorContrastYIQ(@events-item-meta-background-color, @base-text-color, @background-color), @events-item-meta-background-color, 75%);
+@events-item-meta-heading-text-color: mix(@events-item-meta-text-color, @events-item-meta-background-color, 60%);
+
+@events-item-export-link-background-color: @base-color-1;
+@events-item-export-link-text-color: colorContrastYIQ(@events-item-export-link-background-color, @base-text-color, @background-color);
+@events-item-export-link-icon-color: mix(colorContrastYIQ(@events-item-export-link-background-color, @base-text-color, @background-color, 200), @events-item-export-link-background-color, 85%);
+@events-item-export-link-hover-background-color: saturate(darken(@events-item-export-link-background-color, 7%), 7%);
+@events-item-export-link-hover-text-color: colorContrastYIQ(@events-item-export-link-hover-background-color, @base-text-color, @background-color);
+@events-item-export-link-hover-icon-color: mix(colorContrastYIQ(@events-item-export-link-hover-background-color, @base-text-color, @background-color, 200), @events-item-export-link-hover-background-color, 85%);
+
+// Footer
+@footer-text-color: mix(@base-text-color, @background-color, 83%);
+@footer-link-color: mix(@base-link-color, @background-color, 83%);
+@footer-link-hover-color: mix(@base-link-hover-color, @background-color, 83%);
+@footer-h3-color: mix(@base-text-color, @background-color, 50%);
+@footer-h4-color: mix(@base-text-color, @background-color, 60%);
+@footer-h5-color: mix(@base-text-color, @background-color, 70%);
+@footer-h6-color: mix(@base-text-color, @background-color, 80%);
+
+@footer-editing-options-background-color: mix(@base-color-2, @background-color, 15%);;
+@footer-editing-options-text-color: mix(@base-text-color, @footer-editing-options-background-color, 67%);
+@footer-editing-options-link-color: mix(@base-link-color, @footer-editing-options-background-color, 67%);
+@footer-editing-options-link-hover-color: mix(@base-link-hover-color, @footer-editing-options-background-color, 67%);;

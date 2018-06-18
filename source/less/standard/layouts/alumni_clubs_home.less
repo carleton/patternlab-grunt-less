@@ -1,0 +1,164 @@
+@columns: 47;
+@left-nav-lower-limit: 900px;
+
+#meat {
+	.grid();
+	.clearfix;
+}
+@media all and (max-width:449px) {
+	#content, #related {
+		.bottommargin(2,23);
+	}
+	.contentMain {
+		.bottommargin(1,23);
+	}
+	#footer, #bannerAndMeat {
+		.bottommargin(2, 23);
+	}
+}
+@media all and (min-width:450px) and (max-width:549px) {
+	#content, #related {
+		.bottommargin(2, 23);
+	}
+	.contentMain {
+		.bottommargin(1,23);
+	}
+	#bannerAndMeat {
+		.bottommargin(1, 23);
+	}
+	#footer {
+		.bottommargin(2, 23);
+	}
+}
+@media all and (min-width:550px) and (max-width:@left-nav-lower-limit - 1) {
+	#related {
+		.column(17, 35);
+		.push(1, 35);
+		.bottommargin(1, 35);
+	}
+	#content {
+		.bottommargin(1, 35);
+		.push(0, 35);
+		.column(35, 35);
+	}
+	#meat.containsRelated #content {
+		.column(17, 35);
+	}
+	.contentMain {
+		.bottommargin(1,17);
+	}
+	#bannerAndMeat {
+		.bottommargin(1, 35);
+	}
+	#footer {
+		.bottommargin(2, 35);
+	}
+}
+@media all and (min-width:@left-nav-lower-limit) {
+	#content {
+		.column(15, 47);
+		.bottommargin(2,47);
+	}
+	#related {
+		.column(31, 47);
+		.push(1, 47);
+		.bottommargin(2,47);
+	}
+	.contentMain {
+		.bottommargin(1,15);
+	}	
+	#footer {
+		.bottommargin(2, 47);
+	}
+}
+
+#wrapper div#miniCal {
+	h3 {
+		margin: 0;
+		a {
+			display:block;
+			.padding(0.5,23);
+			.leftpadding(1,23);
+	    	&:before {
+	    		content: '';
+	    	}
+			&:after {
+	    		content: '';
+			}
+		}
+	}
+	div#events {
+		.padding(0.5,23);
+		.leftpadding(1,23);
+	}
+	div.foot {
+		padding: 0;
+	}
+	div.foot p.more {
+	    margin: 0;
+	    padding: 0;
+	}
+	p.more a {
+		display:block;
+		.padding(0.5,23);
+		.leftpadding(1,23);
+	    &:after {
+	    	content: '';
+	    }
+	}
+}
+#wrapper #minisiteNavigation {
+	a, strong {
+		.padding(0.5,23);
+		.leftpadding(1,23);
+	}
+}
+
+@media all and (min-width:550px) and (max-width:@left-nav-lower-limit - 1) {
+	#wrapper #meat.containsRelated #content div#miniCal {
+		h3 a {
+			.padding(0.5,17);
+			.leftpadding(1,17);
+		}
+		div#events {
+			.padding(0.5,17);
+			.leftpadding(1,17);
+		}
+		div.foot p.more {
+		    margin: 0;
+		    padding: 0;
+		}
+		div.foot p.more a {
+			.padding(0.5,17);
+			.leftpadding(1,17);
+		}
+	}
+	#wrapper #minisiteNavigation {
+		a, strong {
+			.padding(0.5,17);
+			.leftpadding(1,17);
+		}
+	}
+}
+@media all and (min-width:@left-nav-lower-limit) {
+	#wrapper #meat.containsConRel #content div#miniCal {
+		h3 a {
+			.padding(0.5,15);
+		}
+		div#events {
+			.padding(0.5,15);
+		}
+		div.foot p.more {
+		    margin: 0;
+		    padding: 0;
+		}
+		div.foot p.more a {
+			.padding(0.5,15);
+		}
+	}
+	#wrapper #minisiteNavigation {
+		a, strong {
+			.padding(0.5,15);
+		}
+	}
+}

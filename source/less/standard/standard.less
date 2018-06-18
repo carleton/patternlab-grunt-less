@@ -1,0 +1,111 @@
+@import "../less/lesselements/elements.less";
+@import "../less/flexbox/flexbox.less";
+@import "../less/flawless-semantics-grid/project/stylesheets/normalize.less";
+@import "../less/flawless-semantics-grid/project/stylesheets/grid/useful-mixins.less";
+@import "../less/flawless-semantics-grid/project/stylesheets/grid/flawless-grid.less";
+@import "../less/flawless-semantics-grid/project/stylesheets/grid/rhythm.less";
+@import 'mixins.less';
+@import "iconfont/iconfont.less";
+@import "font_sizing.less";
+
+/* Seeming color duplication is to ensure that things work if run without the php function
+   colorContrastYIQ() available at runtime */
+
+@columns: 47;
+@layout: "default";
+@column-width: 60;
+@gutter-width: 0;
+@total-width: 100%;
+@show-grid:false;
+@show-rhythm: false;
+@left-nav-lower-limit: 900px;
+
+
+/* Uncomment these lines if building directly
+   (otherwise these variables should be provided by Reason) */
+//@page-layout: "47";
+//@footer-layout: "47";
+//@palette: "default";
+//@typography: "default";
+
+// Import the default palette to provide any colors missed by the specified one
+@import "palettes/default.less";
+
+// Import the theme palette
+@import "palettes/@{palette}.less";
+
+// Import the page type palette
+@import "page_type_palettes/@{page-type-palette}.less";
+
+@import "modules/wrappers.less";
+
+@import "modules/headings-sizing.less";
+
+@import "layouts/@{page-layout}.less";
+
+@import "modules/banner.less";
+
+@import "modules/headings.less";
+
+/* Import the typography here to make it easy to override the default css */
+@import "typography/@{typography}.less";
+
+@import "modules/general-lists.less";
+
+@import "modules/general-quotes.less";
+
+@import "modules/general-hr.less";
+
+@import "modules/general-images.less";
+
+@import "modules/tables.less";
+
+@import "modules/buttons.less";
+
+@import "modules/navigation.less";
+
+@import "modules/blurbs.less";
+
+@import "modules/assets.less";
+
+@import "modules/callouts.less";
+
+@import "modules/calendar-mini.less";
+
+@import "modules/publication-related.less";
+
+@import "modules/children.less";
+
+@import "modules/image-sidebar.less";
+
+@import "modules/image-gallery.less";
+
+@import "modules/forms.less";
+
+@import "modules/publication.less";
+
+@import "modules/feedinfo.less";
+
+@import "modules/facstaff.less";
+
+@import "modules/features.less";
+
+@import "modules/announcements.less";
+
+@import "modules/calendar.less";
+
+@import "modules/siblings.less";
+
+@import "modules/courses.less";
+
+@import "modules/goodsell-gazette.less";
+
+@import "modules/sympa-subscribe.less";
+
+@import "modules/upcoming-events.less";
+
+@import "modules/rss-feed.less";
+
+@import "footer_layouts/@{footer-layout}.less";
+
+@import "modules/footer.less";

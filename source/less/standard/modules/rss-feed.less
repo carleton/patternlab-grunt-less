@@ -1,0 +1,193 @@
+// RSS Feedbox
+#wrapper div#rss_nav {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background:@related-pub-background-color;
+	line-height:1.1;
+	a {
+		text-decoration:none;
+	}
+	h4.feedTitle {
+		margin: 0;
+		font-size: @font-size-18;
+		font-weight:200;
+		display:block;
+	    background: @related-pub-heading-background-color;
+		.getContrastYIQ(@related-pub-heading-background-color);
+		color: @related-pub-heading-text-color;
+//		padding:3.7% 6.4% 3.7% 2.25em;
+//		padding:3.7% 6.4% 3.7% -moz-calc(~"6.4% + 1.35em");
+//		padding:3.7% 6.4% 3.7% -webkit-calc(~"6.4% + 1.35em");
+//		padding:3.7% 6.4% 3.7% calc(~"6.4% + 1.35em");
+		.toppadding(0.5,23);
+		.rightpadding(1,23);
+		.bottompadding(0.5,23);
+		.leftpaddingcalc(1,23,1.35em,2.25em);
+		position:relative;
+		&:before {
+			.iconIt(@icon-feed);
+			font-size:0.85em;
+			opacity:0.9;
+			position:absolute;
+//			left:6.4%;
+			left: 4.3478%; // (1,23)
+			display:inline-block;
+			margin-top:0.2em;
+		}
+		&:after {
+			.iconIt(@icon-triangle-down);
+			color:@related-pub-heading-background-color;
+			position:absolute;
+			bottom:-0.65em;
+			left:50%;
+			margin-left:-0.5em;
+		}
+	}
+	&>ul {
+		margin: 0;
+		list-style-type: none;
+//	    padding:6.4%;
+		.padding(1,23);
+		font-size:@font-size-11;
+		a {
+			color:@related-pub-postlink-text-color;
+		}
+		a:hover, a:active, a:focus {
+			color:@related-pub-postlink-text-hover-color;
+			text-decoration:underline;
+		}
+		li {
+			display: block;
+			margin: 1em 0 0;
+			&:first-child {
+				margin: 0;
+			}
+		}
+	}
+}
+#wrapper #content div#rss_nav {
+	// If it’s in #content, don’t shrink the font sizes
+	line-height: inherit;
+	&>ul {
+		font-size: inherit;
+	}
+}
+@media all and (min-width: 450px) and (max-width: 549px) {
+	#navigation div#rss_nav {
+		h4.feedTitle {
+			.toppadding(0.5,9);
+			.rightpadding(1,9);
+			.bottompadding(0.5,9);
+			.leftpaddingcalc(1,9,1.35em,2.25em);
+			&:before {
+				left: 11.1111%; // (1,9)
+			}
+		}
+		&>ul {
+			.padding(1,9);
+		}
+	}
+}
+@media all and (min-width:550px) and (max-width:@left-nav-lower-limit - 1) {
+	#related div#rss_nav, #navigation div#rss_nav {
+		h4.feedTitle {
+			.toppadding(0.5,11);
+			.rightpadding(1,11);
+			.bottompadding(0.5,11);
+			.leftpaddingcalc(1,11,1.35em,2.25em);
+			&:before {
+				left: 9.0909%; // (1,11)
+			}
+		}
+		&>ul {
+			.padding(1,11);
+		}
+	}
+	#content div#rss_nav {
+		h4.feedTitle {
+			.toppadding(0.5,35);
+			.rightpadding(1,35);
+			.bottompadding(0.5,35);
+			.leftpaddingcalc(1,35,1.35em,2.25em);
+			&:before {
+				left: 2.8571%; // (1,35)
+			}
+		}
+		&>ul {
+			.padding(1,35);
+		}
+	}
+	#meat.containsRelated #content div#rss_nav {
+		h4.feedTitle {
+			.toppadding(0.5,23);
+			.rightpadding(1,23);
+			.bottompadding(0.5,23);
+			.leftpaddingcalc(1,23,1.35em,2.25em);
+			&:before {
+				left: 4.3478%; // (1,23)
+			}
+		}
+		&>ul {
+			.padding(1,23);
+		}
+	}
+}
+@media all and (min-width:@left-nav-lower-limit) {
+	#related div#rss_nav, #navigation div#rss_nav {
+		h4.feedTitle {
+			.toppadding(0.5,11);
+			.rightpadding(1,11);
+			.bottompadding(0.5,11);
+			.leftpaddingcalc(1,11,1.35em,2.25em);
+			&:before {
+				left: 9.0909%; // (1,11)
+			}
+		}
+		&>ul {
+			.padding(1,11);
+		}
+	}
+	#content div#rss_nav {
+		h4.feedTitle {
+			.toppadding(0.5,23);
+			.rightpadding(1,23);
+			.bottompadding(0.5,23);
+			.leftpaddingcalc(1,23,1.35em,2.25em);
+			&:before {
+				left: 4.3478%; // (1,23)
+			}
+		}
+		&>ul {
+			.padding(1,23);
+		}
+	}
+	#meat.containsConNav #content div#rss_nav, #meat.containsConRel #content div#rss_nav {
+		h4.feedTitle {
+			.toppadding(0.5,35);
+			.rightpadding(1,35);
+			.bottompadding(0.5,35);
+			.leftpaddingcalc(1,35,1.35em,2.25em);
+			&:before {
+				left: 2.8571%; // (1,35)
+			}
+		}
+		&>ul {
+			.padding(1,35);
+		}
+	}
+	#meat.containsCon #content div#rss_nav {
+		h4.feedTitle {
+			.toppadding(0.5,47);
+			.rightpadding(1,47);
+			.bottompadding(0.5,47);
+			.leftpaddingcalc(1,47,1.35em,2.25em);
+			&:before {
+				left: 2.1277%; // (1,47)
+			}
+		}
+		&>ul {
+			.padding(1,47);
+		}
+	}
+}

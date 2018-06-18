@@ -1,0 +1,281 @@
+div#miniCal {
+    background: @minical-background-color;
+    border: none;
+	line-height:1.1;
+	a {
+		text-decoration:none;
+	}
+	h3 {
+		margin: 0;
+		font-weight:200;
+		a {
+			display:block;
+	    	background: @minical-heading-background-color;
+	    	.getContrastYIQ(@minical-heading-background-color);
+	    	color: @minical-heading-text-color;
+//	    	padding:3.7% 6.4% 3.7% 2.25em;
+//	    	padding:3.7% 6.4% 3.7% -moz-calc(~"6.4% + 1.35em");
+//	    	padding:3.7% 6.4% 3.7% -webkit-calc(~"6.4% + 1.35em");
+//	    	padding:3.7% 6.4% 3.7% calc(~"6.4% + 1.35em");
+//
+// Let's do this according to standard theme columns.
+//
+			.toppadding(0.5,23);
+			.rightpadding(1,23);
+			.bottompadding(0.5,23);
+			.leftpaddingcalc(1,23,1.35em,2.25em);
+	    	position:relative;
+	    	&:before {
+	    		.iconIt(@icon-calendar);
+	    		font-size:0.85em;
+	    		opacity:0.9;
+				position:absolute;
+//				left:6.4%;
+				left: 4.3478%; // (1,23)
+				display:inline-block;
+				margin-top:0.2em;
+	    	}
+			&:after {
+				.iconIt(@icon-triangle-down);
+				color:@minical-heading-background-color;
+				position:absolute;
+				bottom:-0.65em;
+				left:50%;
+				margin-left:-0.5em;
+			}
+			&:hover {
+				background: @minical-heading-hover-background-color;
+	    		.getContrastYIQ(@minical-heading-hover-background-color);
+	    		color: @minical-heading-hover-text-color;
+	    		&:after {
+	    			color: @minical-heading-hover-background-color;
+	    		}
+	    	}
+		}
+	}
+	div#events {
+//	    padding:6.4%;
+		.padding(1,23);
+
+		h4 {
+			border:none;
+			margin:0 0 0.5em 0;
+			padding:0;
+			font-size: @font-size-13;
+			color:@minical-date-text-color;
+		}
+		ul {
+			font-size: @font-size-13;
+			margin: 0;
+		}
+		ul li {
+			margin: 0;
+			color:@minical-time-text-color;
+		}
+		a {
+			color:@minical-eventlink-text-color;
+		}
+		a:hover {
+			text-decoration:underline;
+			color:@minical-eventlink-text-hover-color;
+		}
+	}
+	div.dayblock, div.ongoingblock {
+		margin:1em 0;
+    	font-size:@font-size-11;
+	}
+	div.dayblock:first-child, div.ongoingblock:first-child {
+		margin-top:0;
+	}
+	div.dayblock:last-child, div.ongoingblock:last-child {
+		margin-bottom:0;
+	}
+	div.foot p.more {
+	    margin: 0;
+//	    padding: 0 6.4% 6.4% 6.4%;
+	    .padding(1,23);
+	    padding-top: 0;
+	}
+	p.more a {
+		display:inline-block;
+		padding:0.33em 0.67em;
+		background:@minical-more-background-color;
+	    .getContrastYIQ(@minical-more-background-color);
+	    color: @minical-more-text-color;
+	    &:after {
+	    	.iconIt(@icon-arrow-right);
+	    	margin-left:0.5em;
+	    	opacity:0.75;
+	    	font-size:0.85em;
+	    	vertical-align:-5%;
+	    }
+	}
+	p.more a:hover {
+		background:@minical-more-hover-background-color;
+		.getContrastYIQ(@minical-more-hover-background-color);
+	    color: @minical-more-hover-text-color;
+	}
+}
+#wrapper #content div#miniCal {
+	// If it’s in #content, don’t shrink the font sizes
+	line-height: inherit;
+	div#events {
+		h4, ul {
+			font-size: inherit;
+		}
+	}
+	div.dayblock, div.ongoingblock {
+		font-size: inherit;
+	}
+}
+
+@media all and (min-width: 450px) and (max-width: 549px) {
+	#navigation div#miniCal {
+		h3 a {
+			.toppadding(0.5,9);
+			.rightpadding(1,9);
+			.bottompadding(0.5,9);
+			.leftpaddingcalc(1,9,1.35em,2.25em);
+			&:before {
+				left: 11.1111%; // (1,9)
+			}
+		}
+		div#events {
+			.padding(1,9);
+		}
+		div.foot p.more {
+			.padding(1,9);
+			padding-top: 0;
+		}
+	}
+}
+@media all and (min-width:550px) and (max-width:@left-nav-lower-limit - 1) {
+	#related div#miniCal, #navigation div#miniCal {
+		h3 a {
+			.toppadding(0.5,11);
+			.rightpadding(1,11);
+			.bottompadding(0.5,11);
+			.leftpaddingcalc(1,11,1.35em,2.25em);
+			&:before {
+				left: 9.0909%; // (1,11)
+			}
+		}
+		div#events {
+			.padding(1,11);
+		}
+		div.foot p.more {
+			.padding(1,11);
+			padding-top: 0;
+		}
+	}
+	#content div#miniCal {
+		h3 a {
+			.toppadding(0.5,35);
+			.rightpadding(1,35);
+			.bottompadding(0.5,35);
+			.leftpaddingcalc(1,35,1.35em,2.25em);
+			&:before {
+				left: 2.8571%; // (1,35)
+			}
+		}
+		div#events {
+			.padding(1,35);
+		}
+		div.foot p.more {
+			.padding(1,35);
+			padding-top: 0;
+		}
+	}
+	#meat.containsRelated #content div#miniCal {
+		h3 a {
+			.toppadding(0.5,23);
+			.rightpadding(1,23);
+			.bottompadding(0.5,23);
+			.leftpaddingcalc(1,23,1.35em,2.25em);
+			&:before {
+				left: 4.3478%; // (1,23)
+			}
+		}
+		div#events {
+			.padding(1,23);
+		}
+		div.foot p.more {
+			.padding(1,23);
+			padding-top: 0;
+		}
+	}
+}
+@media all and (min-width:@left-nav-lower-limit) {
+	#related div#miniCal, #navigation div#miniCal {
+		h3 a {
+			.toppadding(0.5,11);
+			.rightpadding(1,11);
+			.bottompadding(0.5,11);
+			.leftpaddingcalc(1,11,1.35em,2.25em);
+			&:before {
+				left: 9.0909%; // (1,11)
+			}
+		}
+		div#events {
+			.padding(1,11);
+		}
+		div.foot p.more {
+			.padding(1,11);
+			padding-top: 0;
+		}
+	}
+	#content div#miniCal {
+		h3 a {
+			.toppadding(0.5,23);
+			.rightpadding(1,23);
+			.bottompadding(0.5,23);
+			.leftpaddingcalc(1,23,1.35em,2.25em);
+			&:before {
+				left: 4.3478%; // (1,23)
+			}
+		}
+		div#events {
+			.padding(1,23);
+		}
+		div.foot p.more {
+			.padding(1,23);
+			padding-top: 0;
+		}
+	}
+	#meat.containsConNav #content div#miniCal, #meat.containsConRel #content div#miniCal {
+		h3 a {
+			.toppadding(0.5,35);
+			.rightpadding(1,35);
+			.bottompadding(0.5,35);
+			.leftpaddingcalc(1,35,1.35em,2.25em);
+			&:before {
+				left: 2.8571%; // (1,35)
+			}
+		}
+		div#events {
+			.padding(1,35);
+		}
+		div.foot p.more {
+			.padding(1,35);
+			padding-top: 0;
+		}
+	}
+	#meat.containsCon #content div#miniCal {
+		h3 a {
+			.toppadding(0.5,47);
+			.rightpadding(1,47);
+			.bottompadding(0.5,47);
+			.leftpaddingcalc(1,47,1.35em,2.25em);
+			&:before {
+				left: 2.1277%; // (1,47)
+			}
+		}
+		div#events {
+			.padding(1,47);
+		}
+		div.foot p.more {
+			.padding(1,47);
+			padding-top: 0;
+		}
+	}
+}

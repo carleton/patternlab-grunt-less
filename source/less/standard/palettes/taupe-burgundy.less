@@ -1,0 +1,39 @@
+// Department palette
+@english-color-wall-offwhite: rgb(255,249,242);
+@english-color-wall-taupe: rgb(179,164,143);
+@english-color-wall-red: rgb(77,15,31);
+@english-color-wood-stain: rgb(40,28,20);
+@english-color-sofa-blue: rgb(00,39,73);
+@english-color-pillow-green: rgb(122,204,204);
+@english-color-pillow-gold: rgb(217,171,33);
+
+// The color of the site background
+@background-color: @english-color-wall-offwhite;
+
+// The primary anchor color; used for navigation, etc.
+@base-color-1: @english-color-wall-taupe;
+
+// The secondary color, used for other major elements
+@base-color-2: @english-color-wall-red;
+
+// The primary accent color, used for site title & other key attention-getting elements
+@accent-color-1: @english-color-wall-red; 
+
+// The secondary accent color, used for page titles & secondary attention elements
+@accent-color-2:  @english-color-sofa-blue;
+
+// Basic text colors
+@base-text-color: @english-color-wood-stain;
+@base-link-color: @english-color-sofa-blue;
+
+// Overrides
+@minical-background-color: mix( @english-color-wall-taupe, @background-color, 65%);
+@children-background-color: @children-base-color;
+@siblings-background-color: @siblings-base-color;
+
+@navjump-icontext-color: mix(colorContrastYIQ(@navjump-background-color, @base-text-color, @background-color), @navjump-background-color, 80%);
+
+@features-nav-base-color: saturate(lighten(@base-color-2, 9%), 2%);
+@features-nav-background-color:fadeout( darken(@features-nav-base-color, 4%), 10% );
+
+@events-nav-background-color: mix(@events-nav-base-color, @background-color, 63%);

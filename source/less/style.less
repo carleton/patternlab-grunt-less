@@ -1,9 +1,44 @@
-/*
- * YOUR STYLES HERE
- */
+@import "warning.less";
 
- @color: blue;
+@import "carleton_basic_rules.less";
+@import "modules.less";
 
-p {
-  color: @color;
+@palette: "maize-blue";
+@page-type-palette: "none";
+@page-layout: "47";
+@typography: "default";
+@footer-layout: "47";
+
+@import "standard/standard.less";
+
+.primaryColor1 {
+	background:@base-color-1;
+}
+
+.primaryColor2 {
+	background:@base-color-2;
+}
+
+.secondaryColor1 {
+	background:@accent-color-1;
+}
+
+.secondaryColor2 {
+	background:@accent-color-2;
+}
+
+.backgroundColor {
+	background:@background-color;
+}
+
+.textColor {
+	background:@base-text-color;
+}
+
+.linkColor {
+	background:@base-link-color
+}
+
+.linkHoverColor {
+	background:@base-link-hover-color;
 }
