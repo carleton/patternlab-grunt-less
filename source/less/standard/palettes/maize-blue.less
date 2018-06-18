@@ -1,0 +1,56 @@
+// The color of the site background
+@background-color: #fff;
+
+// The primary anchor color; used for navigation, etc.
+@base-color-1: rgb(243,182,29);
+
+// The secondary color, used for other major elements
+@base-color-2: rgb(54,118,179);
+
+// The primary accent color, used for site title & other key attention-getting elements
+@accent-color-1: rgb(146,53,53);
+
+// The secondary accent color, used for page titles & secondary attention elements
+@accent-color-2: rgb(88,135,69);
+
+// Basic text colors
+@base-text-color: rgb(51,51,51);
+@base-link-color: rgb(11,80,145);
+
+@h4-color: mix(@base-color-1, @accent-color-1, 34%);
+@h4-in-callout: multiply(darken(@h4-color,1%), @callout-background-color);
+
+@children-base-color: @base-color-2;
+@children-background-color: mix(@children-base-color, @background-color, 25%);
+@children-text-color: contrast(@children-background-color, mix(@base-text-color, @children-background-color, 80%), mix(@children-background-color, @background-color, 20%));
+@children-title-text-color: contrast(@children-background-color, multiply(@base-text-color,@children-background-color), @background-color);
+@children-background-hover-color: mix(@children-base-color, @background-color, 40%);
+@children-text-hover-color: contrast(@children-background-hover-color, @base-text-color, mix(@children-background-hover-color, @background-color, 20%));
+@children-title-text-hover-color: contrast(@children-background-hover-color, multiply(@base-text-color,@children-background-hover-color), @background-color);
+
+@siblings-background-color: mix(@siblings-base-color, @background-color, 40%);
+@siblings-background-hover-color: mix(@siblings-base-color, @background-color, 55%);
+
+@related-pub-more-background-color: mix(@related-pub-base-color, @minical-background-color, 96%);
+@related-pub-more-hover-background-color: mix(@related-pub-base-color, @minical-background-color, 81%);
+
+@navjump-background-color: mix(@base-color-1, @background-color, 90%);
+@navjump-icontext-color: contrast(@navjump-background-color, mix(@base-text-color, @navjump-background-color, 85%), @background-color);
+
+@standard-button-background-color-4: saturate(darken(@accent-color-2,2%),2%);
+
+@minical-time-text-color: multiply(mix(@base-text-color, @background-color, 71%), @minical-background-color);
+@minical-more-background-color: mix(@minical-base-color, @minical-background-color, 96%);
+
+@events-views-current-background-color: @events-views-base-color;
+@events-views-background-color: mix(@events-views-base-color, @background-color, 28%);
+@events-nav-background-color: mix(@events-nav-base-color, @background-color, 50%);
+@events-item-displaydate-month-text-color: mix(contrast(@events-item-displaydate-background-color, @base-text-color, @background-color), @events-item-displaydate-background-color, 96%);
+
+@related-pub-more-background-color: mix(@related-pub-base-color, @minical-background-color, 97%);
+
+@features-nav-current-background-color: darken(@features-nav-base-color,2%);
+@features-nav-fallback-background-color: mix(@base-text-color, mix(@features-nav-base-color, @background-color, 40%), 50%);
+@features-nav-background-color:fadeout( darken(@features-nav-base-color,20%), 16% );
+
+@facstaff-navlinks-tab-background-color: @facstaff-navlinks-current-tab-background-color;

@@ -1,0 +1,40 @@
+@import "palettes/default.less";
+
+// Import the theme palette
+@import "palettes/@{palette}.less";
+
+@import "typography/default.less";
+
+body {
+	background:@background-color;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+#wrapper {
+	margin:5px;
+}
+.colorBlock {
+	height:20px;
+	margin:0 0 5px 0;
+	float:left;
+	width:45%;
+}
+.colorBlock + .colorBlock {
+	margin-left:10%;
+}
+#base1 {
+	background:@base-color-1;
+}
+#base2 {
+	background:@base-color-2;
+}
+#accent1 {
+	color:@accent-color-1;
+}
+#accent2 {
+	color:@accent-color-2;
+}
+#text {
+	color:@base-text-color;
+}

@@ -1,0 +1,45 @@
+// basic colors
+@palette-gold-jacket: rgb(252,231,165);
+@palette-red-sash: rgb(128,32,10);
+@palette-tan-boots: rgb(150,96,7);
+@palette-gray-steel: rgb(97,106,100);
+
+// The color of the site background
+@background-color: rgb(255,253,247);
+
+// The primary anchor color; used for navigation, etc.
+@base-color-1: @palette-gold-jacket;
+
+// The secondary color, used for other major elements
+@base-color-2: @palette-gray-steel;
+
+// The primary accent color, used for site title & other key attention-getting elements
+@accent-color-1: @palette-tan-boots;
+
+// The secondary accent color, used for page titles & secondary attention elements
+@accent-color-2: @palette-red-sash;
+
+// Basic text colors
+@base-text-color: rgb(24,23,15);
+@base-link-color: rgb(0,48,191);
+
+// Other overrides as needed
+@children-base-color: @palette-gold-jacket;
+
+@h4-color: mix(@base-color-2, @accent-color-2, 67%);
+
+@related-pub-background-color: mix(@related-pub-base-color, @background-color, 20%);
+@related-pub-datetime-text-color: mix(@base-color-2, @accent-color-2, 67%);
+@related-pub-more-background-color: mix(@related-pub-base-color, @minical-background-color, 40%);
+
+@features-nav-background-color:fadeout( darken(@features-nav-base-color, 14%), 5% );
+
+@events-views-current-background-color: mix(@events-views-base-color, @background-color, 92%);
+
+@events-options-selected-item-color: @accent-color-2;
+
+@facstaff-navlinks-tab-background-color: mix(@facstaff-navlinks-current-tab-background-color, @background-color, 50%);
+
+@minical-background-color: mix(@minical-base-color, @background-color, 20%);
+@minical-date-text-color: mix(@base-color-2, @accent-color-2, 67%);
+@minical-more-background-color: mix(@minical-base-color, @minical-background-color, 40%);

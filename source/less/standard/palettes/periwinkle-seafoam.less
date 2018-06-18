@@ -1,0 +1,35 @@
+// The color of the site background
+@background-color: rgb(255,255,255);
+
+// The primary anchor color; used for navigation, etc.
+@base-color-1: rgb(203,202,209);
+
+// The secondary color, used for other major elements
+@base-color-2: rgb(146,182,199);
+
+// The primary accent color, used for site title & other key attention-getting elements
+@accent-color-1: rgb(130,0,0);
+
+// The secondary accent color, used for page titles & secondary attention elements
+@accent-color-2: rgb(87,123,138);
+
+// Basic text colors
+@base-text-color: rgb(51,51,51);
+@base-link-color: rgb(11,80,145);
+
+@navjump-icontext-color: mix(colorContrastYIQ(@navjump-background-color, @base-text-color, @background-color), @navjump-background-color, 91%);
+
+@h4-color: mix(@accent-color-1, @accent-color-2, 55%);
+
+@features-nav-background-color:fadeout( darken(@features-nav-base-color, 33%), 5% );
+@features-nav-hover-background-color: fadeout( darken(@features-nav-base-color, 20%), 5% );
+
+@events-nav-link-background-color: @events-nav-base-color;
+@events-nav-link-text-color: colorContrastYIQ(@events-nav-link-background-color, @base-text-color, @background-color);
+
+@events-nav-link-hover-background-color: darken(@events-nav-base-color, 7%);
+@events-nav-link-hover-text-color: colorContrastYIQ(@events-nav-link-hover-background-color, @base-text-color, @background-color);
+
+@events-grid-link-color:mix(@base-link-color, colorContrastYIQ(@events-grid-background-color, multiply(@events-grid-background-color, @base-color-2), @background-color), 67%);
+
+@image-gallery-pagination-current-text-color: multiply(@base-text-color, @image-gallery-pagination-current-background-color);

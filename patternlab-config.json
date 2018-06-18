@@ -11,8 +11,7 @@
       "js" : "./source/js",
       "images" : "./source/images",
       "fonts" : "./source/fonts",
-      "css" : "./source/css/",
-      "less" : "./source/less/"
+      "css" : "./source/css/"
     },
     "public" : {
       "root" : "./public/",
