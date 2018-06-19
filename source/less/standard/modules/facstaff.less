@@ -18,6 +18,7 @@ div#facultyStaff {
 			font-style:italic;
 			display:inline-block;
 			margin:0 0.33em 0 0;
+      padding:0;
 			font-size:@font-size-13;
 			&:after {
 				content:":";
@@ -27,9 +28,12 @@ div#facultyStaff {
 			display:inline;
 			margin:0;
 			padding:0;
+      list-style-type: none;
 		}
 		li {
-			display:inline-block;
+      display:inline-block;
+      margin-top: 2px;
+      margin-bottom: 0;
 			margin-left:0.25em;
 			&:before {
 				content:"/";
@@ -80,8 +84,10 @@ div#facultyStaff {
 		border:none;
 		padding:0;
 		margin:0.67em 0 2em 0;
+    clear: both;
 	}
 	.facStaffImage {
+    float:right;
 		margin:0;
 		display:block;
 		width:24%;
