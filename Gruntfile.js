@@ -88,6 +88,10 @@ module.exports = function (grunt) {
      * BUILD TASKS
     ******************************************************/
     less: {
+      options: {
+        sourceMap:true,
+        outputSourceFiles: true
+      },
       build: {
         files: {
           "source/css/style.css": "source/less/style.less"
