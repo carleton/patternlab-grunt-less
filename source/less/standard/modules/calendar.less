@@ -4,10 +4,28 @@
 	div.views {
 		margin-bottom:1px;
 		margin-left:4%;
+    .clearfix-after();
+    h4 {
+      position:absolute;
+      left:-9999px;
+    }
+    ul {
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
 		ul li {
+      margin:0;
+      padding:0;
+      float:left;
 			position:relative;
 			margin-right:1px;
+      a, strong, h4 {
+        padding:.4em .75em;
+        display:block;
+      }
 			a {
+        text-decoration:none;
 				background: @events-views-background-color;
 				color: @events-views-text-color;
 				margin:0;
@@ -51,6 +69,7 @@
 		left:-9999px;
 	}
 	div.nav {
+    clear:left;
 		background: @events-nav-background-color;
 		color: @events-nav-text-color;
 		padding:0;
@@ -58,7 +77,13 @@
 		width:100%;
 		text-align:center;
 		margin-bottom:5px;
+    &.empty {
+      padding:0;
+      border:none;
+      border-top:3px solid #748FC2;
+    }
 		a {
+      text-decoration: none;
 			background: @events-nav-link-background-color;
 			color: @events-nav-link-text-color;
 			padding:0.33em 0.5em;
@@ -83,6 +108,10 @@
 		}
 	}
 	div.gridAndOptions {
+    display: block;
+    float: right;
+    width: 16em;
+    clear:left;
 		background:none;
 		border:none;
 		margin:0;
@@ -91,6 +120,8 @@
 			margin:0;
 		}
 		h4 {
+      display:inline;
+      margin:0 .3em;
 			color: @events-options-heading-color;
 			font-weight:normal;
 			font-style:normal;
@@ -98,6 +129,9 @@
 		}
 		.calendarGrid {
 			border:none;
+      display:inline;
+      margin:0 .3em;
+      font-size:100%;
 			background: @events-grid-background-color;
 			color: @events-grid-text-color;
 			h4 {
@@ -107,33 +141,70 @@
 			a {
 				color: @events-grid-link-color;
 				&.previous, &.next {
+          text-decoration:none;
 					font-family: 'carletonStandardIcons';
 					font-size: @font-size-10;
 				}
 			}
 			table a {
+        text-decoration:none;
 				display:block;
+        &:hover, &:active, &:focus {
+          text-decoration:underline;
+        }
 			}
 			th {
+        font-size:90%;
 				font-weight:normal;
 				color: @events-grid-days-color;
 			}
+      td {
+        margin:0;
+        padding:.1em;
+        text-align:center;
+        a {
+          padding:.1em;
+        }
+      }
 			td.hasEvent {
+        font-weight:bold;
 				a {
 					color: @events-grid-has-event-link-color;
 				}
 			}
+      /* modules.ss also defined color. Standard theme probably should too. */
 			td.currentlyViewing {
+        color:#ffffff;
 				background: @events-grid-currently-viewing-background-color;
+        a {
+          color:#ffffff;
+        }
 			}
 			td.today {
-				border-color: @events-grid-today-border-color;
+        border:1px solid @events-grid-today-border-color;
+        background-color:transparent;
 				a {
 					color: @events-grid-today-color;
 				}
 			}
 
 		}
+    .dateJump, div.search, div.options {
+      padding-top: 3px;
+      margin: 7px;
+      margin-top: 15px;
+      clear:both;
+      .otherActions {
+        font-size:88%;
+      }
+      h4 {
+        margin: 0;
+        padding: 0;
+        font-size: 110%;
+        font-style: italic;
+        clear:both;
+      }
+    }
 		.dateJump {
 			background: @events-datejump-background-color;
 			margin:2px 0;
@@ -144,6 +215,7 @@
 			margin:2px 0;
 			padding:3%;
 			input.search {
+        width:8em;
 				background: @events-search-input-background-color;
 				color: @events-search-input-text-color;
 				border:1px solid @events-search-input-border-color;
@@ -153,7 +225,6 @@
 		}
 		div.options {
 			&>div {
-				margin:0;
 				border:none;
 				background-color: @events-options-background-color;
 				margin:3px 0;
@@ -164,6 +235,12 @@
 				list-style:none;
 				margin:0;
 				padding:0;
+        li {
+          margin: 0;
+          padding-top: 3px;
+          padding-bottom: 2px;
+          font-size: 95%;
+        }
 				a {
 					display:block;
 					text-decoration:none;
@@ -191,25 +268,65 @@
 		border:none;
 		background: @events-focus-background-color;
 		color: @events-focus-text-color;
+    .clearfix-after();
 		ul, ul li {
 			border-color: @background-color;
 		}
 		h3 {
+      width:5.5em;
+      float:left;
+      font-weight:normal;
+      font-style:italic;
+      font-size:95%;
+      margin:0;
 			color: @events-focus-heading-color;
 		}
+    ul {
+      margin:0 0 0 6.25em;
+      padding:0;
+      list-style:none;
+      border-left:1px solid #8da6d3;
+    }
+    li {
+      margin:0;
+      padding:.5em;
+      border-top:1px solid #8da6d3;
+      &.first {
+        border-top:none;
+      }
+    }
 		h4 {
+      margin:0;
+      font-size:110%;
 			font-weight:normal;
 			color: @events-focus-subheading-color;
 		}
-		form input#calendar_search_above {
-			font-weight:normal;
-			background: @events-focus-search-input-background-color;
-			color: @events-focus-search-input-text-color;
-			border: 1px solid @events-focus-search-input-border-color;
-			border-bottom:none;
-			border-right:none;
-			padding:0.05em 0.3em;
+    .search {
+      h4 {
+        display:inline;
+        margin:0;
+      }
+    }
+		form {
+      margin:0;
+      display:inline;
+      input#calendar_search_above {
+        font-size:120%;
+        font-weight: normal;
+        background: @events-focus-search-input-background-color;
+        color: @events-focus-search-input-text-color;
+        border: 1px solid @events-focus-search-input-border-color;
+        border-bottom: none;
+        border-right: none;
+        padding: 0.05em 0.3em;
+      }
 		}
+    .otherActions, .clear {
+      font-size:88%;
+      .clear {
+        font-size:100%;
+      }
+    }
 	}
 	input[type="submit"] {
 		background:@events-form-submit-background-color;
@@ -241,6 +358,11 @@
 		}
 	}
 	#events {
+    h3 {
+      margin-bottom: 10px;
+      margin-top: 1.5em;
+      clear:none;
+    }
 		h3.upcoming, h3.archive {
 			font-weight:bold;
 			color: @events-list-upcoming-archive-heading-color;
@@ -270,6 +392,12 @@
 		h5.time {
 			margin:0.5em 0 0 0;
 		}
+    ul {
+      list-style-type: none;
+      margin-top: 0;
+      margin-left: 2em;
+      padding-left: 0;
+    }
 		ul.dayEvents, ul.ongoingEvents {
 			list-style:disc;
 			color: @events-list-text-color;
@@ -281,6 +409,9 @@
 				list-style:disc;
 			}
 		}
+    li {
+      margin-top: 3px;
+    }
 		li.event {
 			.clearfix-after();
 			a {
@@ -308,6 +439,10 @@
 	}
 	.foot {
 		padding-top:1em;
+    clear: both;
+    .gridAndOptions {
+      display: none;
+    }
 	}
 	.iCalExport {
 		clear:both;
@@ -352,6 +487,10 @@
 			}
 		}
 		.back {
+      padding: 0.75em;
+      float: right;
+      margin: 0 10px 10px;
+      border: 1px solid #92AAD6;
 			overflow:hidden;
 			text-align:right;
 			a {
@@ -408,6 +547,21 @@
 				font-size: @font-size-15;
 			}
 		}
+    div.images {
+      background-color:#E3EDFF;
+      border: 1px solid #748FC2;
+      float: right;
+      margin: 0 10px 10px 10px;
+      padding: 10px;
+      text-align:center;
+      .tnDesc {
+        margin: 3px 0 8px 0;
+      }
+    }
+    div.dates ul {
+      max-height:15em;
+      overflow:auto;
+    }
 		.eventItemMain {
 			&.hasDate {
 				margin-left:4.75em;
@@ -439,6 +593,7 @@
 			}
 			.repetition {
 				.explanation {
+          font-weight: bold;
 					font-style: italic;
 					color: @events-item-repetition-explanation-text-color;
 				}
@@ -612,7 +767,7 @@
 				margin:0.67em 0;
 			}
 			.export {
-				margin-top:0.75em;
+        margin:0.75em 0 1em 0;
 				a {
 					display:inline-block;
 					background-color: @events-item-export-link-background-color;
@@ -659,11 +814,36 @@
 				}
 			}
 		}
+    .eventLocation {
+      margin:1em 0;
+      .clearfix-after();
+      .eventMap {
+        float:left;
+        margin-right:1em;
+      }
+    }
 		.reasonMaintainerPanel {
+      background:#eee;
+      opacity:0.8;
 			margin-top:1.75em;
 			padding: 0.75em 0.75em 0.75em 4.75em;
+      h4 {
+        font-size:.9em;
+        color:#555;
+        font-style:italic;
+        font-weight:normal;
+        margin:0 0 .25em 0;
+      }
 			.borrowThis a.borrowThisLink {
+        display:inline-block;
+        padding:.125em .5em;
+        text-decoration:none;
+        background:#d8d8d8;
+        border-radius:.25em;
 				color:@base-text-color;
+        &:active, &:focus, &:hover {
+          background:#fff;
+        }
 			}
 		}
 	}

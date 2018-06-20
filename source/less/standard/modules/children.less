@@ -1,8 +1,20 @@
 // Children
 #wrapper ul.childrenList {
+  margin-top: 10px;
+  margin-left: 0;
+  padding-top: 10px;
+  padding-left: 0;
+  clear: both;
+  list-style: none;
 	border:none;
+  img {
+    float:left;
+    margin:0 1em 0 0;
+  }
 	li {
+    list-style-type: none;
 		margin-bottom:1px;
+    display:block;
 	}
 	li>a {
 		background:@children-background-color;
@@ -13,6 +25,8 @@
 		padding:2%;
 		position:relative;
 		h4 {
+      margin:0;
+      padding:0;
 			color:@children-title-text-color;
 		}
 		div.childDesc {
