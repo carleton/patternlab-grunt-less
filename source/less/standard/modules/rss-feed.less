@@ -1,4 +1,78 @@
 // RSS Feedbox
+div#rss_content {
+  h3 {
+    color:#FFFFCC;
+    padding:.25em .5em;
+    font-weight:normal;
+    clear:both;
+    background:#3F659E url(../ui_images/subtle_blue_fade.png) repeat-x;
+    border-bottom:1px solid #365788;
+    font-size:110%;
+  }
+  ul {
+    margin-left:0;
+    padding-left:0;
+    list-style-type:none;
+    h3 {
+      color:#000;
+      background:none;
+      padding:0;
+      font-weight:bold;
+      clear:none;
+      border:none;
+    }
+    h4, p {
+      margin:.33em 0;
+    }
+  }
+  li {
+    clear:both;
+    border-bottom:1px dotted #8AA3D0;
+    padding-bottom:.75em;
+    font-size:90%;
+    overflow:hidden;
+    ul {
+      list-style-type:disc;
+      margin-left:3em;
+    }
+    li {
+      margin-top:0;
+      margin-bottom:0;
+      border:none;
+      padding-bottom:0;
+      clear:none;
+      font-size:100%;
+    }
+    div.desc {
+      margin-left:1.5em;
+    }
+  }
+  img {
+    max-width:100%;
+    max-height:200px;
+  }
+  div.pagination {
+    font-size:120%;
+    a {
+      padding:.25em .33em;
+      border:1px solid #8AA3D0;
+      &:hover {
+        background-color:#8AA3D0;
+      }
+      &.prev, &:next {
+        border:none;
+      }
+    }
+    strong {
+      a, a:hover {
+        background-color:#8AA3D0;
+        text-decoration:none;
+        color:#000;
+        cursor:default;
+      }
+    }
+  }
+}
 #wrapper div#rss_nav {
 	margin: 0;
 	padding: 0;
@@ -45,6 +119,7 @@
 		}
 	}
 	&>ul {
+    color:#999;
 		margin: 0;
 		list-style-type: none;
 //	    padding:6.4%;

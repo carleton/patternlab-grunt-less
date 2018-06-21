@@ -74,6 +74,8 @@ div#facultyStaff {
 		}
 	}
 	h3.facStaffHead {
+    margin-top: 35px;
+    margin-bottom: 5px;
 		font-weight:200;
 		color: @facstaff-heading-color;
 		a {
@@ -85,6 +87,7 @@ div#facultyStaff {
 		padding:0;
 		margin:0.67em 0 2em 0;
     clear: both;
+    .clearfix-after();
 	}
 	.facStaffImage {
     float:right;
@@ -105,7 +108,6 @@ div#facultyStaff {
 		background: @facstaff-name-background-color;
 		color: @facstaff-name-text-color;
 		font-size:@font-size-21;
-		font-weight:normal;
 		padding:0.25em 0.67em;
 		margin:0;
 		font-weight:300;
@@ -127,6 +129,9 @@ div#facultyStaff {
 				vertical-align:5%;
 			}
 		}
+    .degrees {
+       font-weight: normal;
+     }
 	}
 	.facStaffInfoWrapper2 {
 		margin:0;
@@ -136,6 +141,7 @@ div#facultyStaff {
 		padding:@font-size-14;
 	}
 	.facStaffLeave {
+    font-style: italic;
 		margin-top:0.4em;
 	}
 	.facStaffInfo {
@@ -289,8 +295,10 @@ div#facultyStaff {
 				}
 			}
 			.facStaffImage, .facStaffImageReplacement {
+        display: table;
+        margin-bottom: 15px;
 				width:100%;
-				min-width:0px;
+				min-width:0;
 				height:150px;
 				overflow:hidden;
 				float:none;
